@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{74B87DDF-5D40-44FE-8AB8-EC341CA70B02}</ProjectGuid>
+    <RootNamespace>TestOpcClient</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\bin\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\obj\</IntDir>
+    <TargetName>ZET$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\bin\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\bin\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\obj\</IntDir>
+    <TargetName>ZET$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)$(Configuration)\$(ProjectName)\bin\</OutDir>
+    <IntDir>$(SolutionDir)$(Configuration)\$(ProjectName)\obj\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ZetToolsDir)boost\include;C:\ZETTools;$(SolutionDir)OpcClientLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ZetToolsDir)boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>uxtheme.lib;$(SolutionDir)Output\lib\OpcClientLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>uxtheme.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>del /f /q "$(SolutionDir)Output\$(TargetFileName)"
+copy "$(TargetPath)" "$(SolutionDir)Output\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>del /f /q "$(TargetPath)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ZetToolsDir)boost\include;C:\ZETTools;$(SolutionDir)OpcClientLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(ZetToolsDir)boost\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>uxtheme.lib;$(SolutionDir)Output\lib\OpcClientLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>uxtheme.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(SolutionDir)Output\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ZetToolsDir)boost\include;C:\ZETTools;$(SolutionDir)OpcClientLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4005</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ZetToolsDir)boost\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>uxtheme.lib;$(SolutionDir)Output\lib\OpcClientLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>uxtheme.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>del /f /q "$(SolutionDir)Output\$(TargetFileName)"
+copy "$(TargetPath)" "$(SolutionDir)Output\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>del /f /q "$(TargetPath)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ZetToolsDir)boost\include;C:\ZETTools;$(SolutionDir)OpcClientLib\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(ZetToolsDir)boost\lib64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>uxtheme.lib;$(SolutionDir)Output\lib\OpcClientLib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <DelayLoadDLLs>uxtheme.dll</DelayLoadDLLs>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0419</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <PostBuildEvent>
+      <Command>copy "$(TargetPath)" "$(SolutionDir)Output\$(TargetFileName)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="resource\icons\enteties\node.ico" />
+    <None Include="resource\icons\enteties\tag.ico" />
+    <None Include="resource\icons\misc\disconnect.ico" />
+    <None Include="resource\icons\windows\connect.ico" />
+    <None Include="resource\icons\enteties\host.ico" />
+    <None Include="resource\icons\windows\dcom-configurator.ico" />
+    <None Include="resource\icons\windows\main.ico" />
+    <None Include="resource\icons\enteties\network.ico" />
+    <None Include="resource\icons\enteties\opc-server.ico" />
+    <None Include="resource\icons\windows\rpc-ping.ico" />
+    <None Include="resource\icons\statuses\status-bad.ico" />
+    <None Include="resource\icons\statuses\status-good.ico" />
+    <None Include="resource\icons\statuses\status-uncertain.ico" />
+    <None Include="resource\icons\windows\settings.ico" />
+    <None Include="resource\icons\windows\tag-properties.ico" />
+    <None Include="resource\toolbars\main.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(ZetToolsDir)pugixml-1.0\src\pugiconfig.hpp" />
+    <ClInclude Include="$(ZetToolsDir)pugixml-1.0\src\pugixml.hpp" />
+    <ClInclude Include="resource\resource.h" />
+    <ClInclude Include="source\algo\hightlight_rule\hightlight_rule.hpp" />
+    <ClInclude Include="source\algo\ico_generator\ico_generator.hpp" />
+    <ClInclude Include="source\algo\network\network.hpp" />
+    <ClInclude Include="source\gui\connect\connect_dlg.h" />
+    <ClInclude Include="source\gui\connect\host_tree\host_tree.h" />
+    <ClInclude Include="source\gui\main\client_tree_view\client_tree\client_tree.h" />
+    <ClInclude Include="source\gui\main\client_tree_view\client_tree_view.h" />
+    <ClInclude Include="source\gui\main\tag_overview\tag_list\tag_list.h" />
+    <ClInclude Include="source\gui\main\tag_overview\tag_overview.h" />
+    <ClInclude Include="source\gui\main\main_toolbar\main_toolbar.h" />
+    <ClInclude Include="source\gui\main\tag_overview\tag_properties\tag_properties_dlg.h" />
+    <ClInclude Include="source\gui\rpc_ping\rpc_ping_dlg.h" />
+    <ClInclude Include="source\gui\settings\settings_dlg.h" />
+    <ClInclude Include="source\gui\settings\tabs\tag_overview\rule_list\rule_list.h" />
+    <ClInclude Include="source\gui\settings\tabs\tag_overview\settings_tag_overview_tab.h" />
+    <ClInclude Include="source\gui\utils\list\list.h" />
+    <ClInclude Include="source\gui\utils\tab\default_tab.h" />
+    <ClInclude Include="source\gui\utils\tab\tabs.h" />
+    <ClInclude Include="source\gui\utils\toolbar\toolbar.h" />
+    <ClInclude Include="source\gui\utils\tree\tree.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="source\application\application.h" />
+    <ClInclude Include="source\gui\main\main_dlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(ZetToolsDir)pugixml-1.0\src\pugixml.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\algo\hightlight_rule\hightlight_rule.cpp" />
+    <ClCompile Include="source\algo\ico_generator\ico_generator.cpp" />
+    <ClCompile Include="source\algo\network\network.cpp" />
+    <ClCompile Include="source\gui\connect\connect_dlg.cpp" />
+    <ClCompile Include="source\gui\connect\host_tree\host_tree.cpp" />
+    <ClCompile Include="source\gui\main\client_tree_view\client_tree\client_tree.cpp" />
+    <ClCompile Include="source\gui\main\client_tree_view\client_tree_view.cpp" />
+    <ClCompile Include="source\gui\main\tag_overview\tag_list\tag_list.cpp" />
+    <ClCompile Include="source\gui\main\tag_overview\tag_overview.cpp" />
+    <ClCompile Include="source\gui\main\main_toolbar\main_toolbar.cpp" />
+    <ClCompile Include="source\gui\main\tag_overview\tag_properties\tag_properties_dlg.cpp" />
+    <ClCompile Include="source\gui\rpc_ping\rpc_ping_dlg.cpp" />
+    <ClCompile Include="source\gui\settings\settings_dlg.cpp" />
+    <ClCompile Include="source\gui\settings\tabs\tag_overview\rule_list\rule_list.cpp" />
+    <ClCompile Include="source\gui\settings\tabs\tag_overview\settings_tag_overview_tab.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="source\application\application.cpp" />
+    <ClCompile Include="source\gui\main\main_dlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource\resource.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="resource\resource.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

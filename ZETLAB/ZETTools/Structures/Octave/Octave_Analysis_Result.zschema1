@@ -1,0 +1,49 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Octave_Analysis_Result: 0x10078
+{
+	title "Result of octave specral analysis"
+	description "Instant spectr"
+
+	u8 channelID[16] {
+		description "Full channel identificator"
+		default 0
+	}
+	
+	char spectrUnits[8] {
+		description "Unit of result values"
+		default ""
+	}
+	
+	u32 octaveType {
+		description "Number of bands in one octave"
+		default 1
+	}
+	
+	float minFrequncy {
+		description "Minimum frequency value in range"
+		default 0
+	}
+	
+	float maxFrequncy {
+		description "Maximum frequency value in range"
+		default 0
+	}
+	
+	float peakValue {
+		description "Maximum value of spectr"
+		default 0
+	}
+	
+	float peakFrequency {
+		description "Frequency of maximum value"
+		default 0
+	}
+	
+	float spectr[] {
+		description "Result"
+		default 0
+	}
+}

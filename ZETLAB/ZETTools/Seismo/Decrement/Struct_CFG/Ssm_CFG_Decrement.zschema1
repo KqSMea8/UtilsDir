@@ -1,0 +1,89 @@
+# bash style comment
+/* C style comment */
+// C++ style comment
+
+struct Ssm_str_cfg_Decrement: 0x10055 {
+
+	title "Decrement configuration"
+	description "Decrement configuration"
+	
+	float MinFrequency {
+		description "Minimum fundamental frequency"
+		control edit
+		minimum 0.01
+		maximum 10000
+		default 0.01
+	}
+	
+	float MaxFrequency {
+		description "Maximum fundamental frequency"
+		control edit
+		minimum 0.01
+		maximum 10000
+		default 10000
+	}
+
+	float MinDecrement {
+		description "Minimum logarithmic decrement"
+		control edit
+		minimum 0.01
+		maximum 10000
+		default 0.01
+	}
+	
+	float MaxDecrement {
+		description "Maximum logarithmic decrement"
+		control edit
+		minimum 0.01
+		maximum 10000
+		default 10000
+	}
+	
+	u32 FreqDecade {
+		description "Decade of frequency range"
+		control edit
+		minimum 0
+		maximum 4
+		default 0
+	}
+	
+	float FreqResolution {
+		description "Resolution of spectr frequency scale"
+		control edit
+		minimum 0.01
+		maximum 10.0
+		default 1.0
+	}
+	
+	float AveragingTime	{
+		description "Time of averaging spectr measures"
+		control edit
+		minimum 1
+		maximum 600
+		default 1
+	}
+	
+	u32 MaxNumber {
+		description "Maximum number of frequensies in sampling range"
+		control edit
+		minimum 10
+		maximum 200
+		default 16
+	} 
+	
+	float MaxRMD {
+		description "Maximum acceptable root mean deviation for samples"
+		control edit
+		minimum 0.0
+		maximum 1.0
+		default 0.03
+	}
+	
+	u32 AccumulatorSize {
+		description "Size of array accumulator for averaging"
+		control edit
+		minimum 1
+		maximum 9000
+		default 1
+	}
+}

@@ -1,0 +1,13 @@
+struct Ssm_cfg_Algr_Correlation: 0x10023 {
+	title "Configuration"
+	description "SKSV. Configuration algorithm NotSyncroSignal"
+
+	f32 threshold {
+		description "Threshold of correlation"
+		default 3.0
+		control edit
+		minimum 0.1
+		maximum 10.0
+	}
+}
+

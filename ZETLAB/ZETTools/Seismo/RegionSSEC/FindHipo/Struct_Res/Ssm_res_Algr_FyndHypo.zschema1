@@ -1,0 +1,30 @@
+# bash style comment
+/* C style comment */
+// C++ style comment
+//-----------------------------------------------------------------------------
+struct Ssm_res_Algr_FindHypo: 0x10043
+{
+	description "SKSV. The result of algorithm FindHypo"
+	title "Result"
+
+	group "Hypocenter coordinates"
+	double hypoLatitude {
+		description "Hypocenter Latitude, degree"
+		control edit
+	}
+	double hypoLongitude {
+		description "Hypocenter Longitude, degree"
+		control edit
+	}
+	double hypoDepth {
+		description "Hypocenter Altitude, km"
+		control edit
+	}
+	end_group
+	
+	float magnitude {
+		description "Magnitude, Richter scale"
+		control edit
+	}
+}
+//-----------------------------------------------------------------------------

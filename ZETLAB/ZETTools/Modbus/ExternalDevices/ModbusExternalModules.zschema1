@@ -1,0 +1,165 @@
+// Modbus. External devices
+//
+struct Modbus_External_Interface_Module: 0x10081 {
+	description "Modbus. The structure of the external interface module"
+	title "External interface"
+
+	char instanceId[512]
+	{
+		description "COM Port unique ID"
+		default "0"
+		control edit
+	}
+	char name[512]
+	{
+		description "COM Port user name"
+		default "0"
+		control edit
+	}
+	u32 baudRate
+	{
+		description "COM Port baudrate at which running"
+		default 0
+		control edit
+	}
+	u8 byteSize
+	{
+		description "Number of bits/byte: 4-8"
+		default 0
+		control edit
+		minimum 4
+		maximum 8
+	}
+	u8 parity
+	{
+		description "Parity mode: 0-4 = None,Odd,Even,Mark,Space"
+		default 0
+		control edit
+		minimum 0
+		maximum 2
+	}
+	u8 stopBits
+	{
+		description "Number stop bits: 0, 1, 2 = 1, 1.5, 2"
+		default 0
+		control edit
+		minimum 0
+		maximum 2
+	}
+
+	float maxAnswerTimeOut
+	{
+		description "Maximum device answer time out, msec"
+		default 25
+		control edit
+		minimum 0
+		maximum 1000
+	}
+
+	float maxNewDataDelay
+	{
+		description "Maximum new data delay, msec"
+		default 25
+		control edit
+		minimum 0
+		maximum 1000
+	}
+}
+
+struct Modbus_External_Device_Module: 0x10082 {
+	description "Modbus. The structure of the external device module"
+	title "External device"
+
+	char name[512]
+	{
+		description "Device name"
+		default "0"
+		control edit
+	}
+	u32 node
+	{
+		description "Device node"
+		default 1
+		control edit
+	}
+	u8 protocolType
+	{
+		description "Device protocol type"
+		string_list "MODBUS RTU", "MODBUS ASCII"
+		default 0
+		control combobox
+	}
+}
+
+struct Modbus_External_Channel_Module: 0x10083 {
+	description "Modbus. The structure of the external channel module"
+	title "External channel"
+
+	char name[512]
+	{
+		description "Channel name"
+		default "0"
+		control edit
+	}
+	u16 regAddr
+	{
+		description "Register address for read"
+		default 0
+		control edit
+	}
+	u8 regComm
+	{
+		description "Command for read register"
+		default 0
+		control edit
+	}
+	u16 regDataType
+	{
+		description "Register data type"
+		string_list "float (AB CD)", "float(CD AB)", "float(DC BA)", "int32 (AB CD)", "int32 (CD AB)", "int32(DC BA)"
+		default 0
+		control combobox
+	}
+	float regReadFreq
+	{
+		description "Frequency for register read"
+		default 0
+		control edit
+	}
+	char regMeasure[128]
+	{
+		description "Register measure"
+		default ""
+		control edit
+	}
+	float regResolution
+	{
+		description "Register resolution"
+		default 0
+		control edit
+	}
+	float regMaxLevel
+	{
+		description "Register maximum level"
+		default 0
+		control edit
+	}
+	float regReference
+	{
+		description "Register reference"
+		default 0
+		control edit
+	}
+	float regMultiplicat
+	{
+		description "Register multiplicative factor"
+		default 0
+		control edit
+	}
+	float regAdditive
+	{
+		description "Register additive factor"
+		default 0
+		control edit
+	}
+}

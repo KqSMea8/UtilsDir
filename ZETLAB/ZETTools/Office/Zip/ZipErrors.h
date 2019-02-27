@@ -1,0 +1,16 @@
+/*! Определения ошибок при работе с ZIP-файлами.
+*/
+
+#pragma once
+
+#define ZIP_OK								0
+#define ZIP_ERROR_BAD_FILE_NAME				-1
+#define ZIP_ERROR_FILE_TOO_SMALL			-2
+#define ZIP_ERROR_BAD_FILE_FORMAT			-100
+#define ZIP_ERROR_BAD_FILE_HEADER_FORMAT	-101
+#define ZIP_ERROR_BAD_CENTRAL_DIR_FORMAT	-102
+#define ZIP_ERROR_BAD_END_RECORD_FORMAT		-103
+#define ZIP_ERROR_NO_FILE_HEADER			-104
+#define ZIP_ERROR_NO_CENTRAL_DIR_HEADER		-105
+#define ZIP_ERROR_NO_END_RECORD_HEADER		-106
+#define ZIP_ERROR_BAD_DESCRIPTOR_FORMAT		-200

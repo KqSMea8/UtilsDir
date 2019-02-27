@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{582d9269-d21d-4607-a63c-a015a66c8736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils">
+      <UniqueIdentifier>{a1708c0c-6cbb-4165-9a1d-1806f1168516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils">
+      <UniqueIdentifier>{4fab14db-b391-4d9a-b99b-c20b7ea18c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils\instance">
+      <UniqueIdentifier>{38f4de03-a1a3-4931-a667-2f44201bbfc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils\error_obtainer">
+      <UniqueIdentifier>{1890ebf7-b5c4-4caf-a34f-d74b9b3f922c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\host">
+      <UniqueIdentifier>{a8ddd33f-1fa5-4e15-bfa3-45c29f30e105}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\host">
+      <UniqueIdentifier>{7fe7a10c-9bd0-4872-b8ed-c46251626e95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\server">
+      <UniqueIdentifier>{24e4c93c-da7d-43a7-99d5-4f27b41eb0bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\server">
+      <UniqueIdentifier>{3095dcb2-5905-44b0-a1c1-068513fe04d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils\rpc_ping">
+      <UniqueIdentifier>{dd77c102-907f-42de-bbec-a2f022b4a37e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\rpc_ping">
+      <UniqueIdentifier>{7775d5a1-cf29-490f-b745-e624b8fb4c73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\utils\logger">
+      <UniqueIdentifier>{45efb2a0-f701-4988-b628-8826f1a0aa35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils\logger">
+      <UniqueIdentifier>{ea076339-c6d8-473a-b30f-31bbd6c0823a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\opc">
+      <UniqueIdentifier>{254d40d2-5d62-4a5f-a439-4c41af5d1202}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client">
+      <UniqueIdentifier>{73c8f862-4baa-4add-ab9d-ed02e0fcfd98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client">
+      <UniqueIdentifier>{613f8842-85f2-4e4b-b955-3bda09a5a501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\group">
+      <UniqueIdentifier>{7596012d-56b7-42bd-84ba-03720c4ddaa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\group">
+      <UniqueIdentifier>{357a1781-85e3-40f4-9b04-1280b30ee802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\group\item">
+      <UniqueIdentifier>{b60d3e40-7d92-43a9-8c2c-e374cff6fee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\group\item">
+      <UniqueIdentifier>{6be3670e-9a95-47d4-a457-14da06de53b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\session">
+      <UniqueIdentifier>{0887c42b-0e97-47e1-b35f-9f82792730db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\session">
+      <UniqueIdentifier>{09275cbe-6e9d-4a0b-a75b-84ed2aa29d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\group\detail">
+      <UniqueIdentifier>{9ccf686e-3094-44a8-82e2-7d860aacc536}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\group\detail">
+      <UniqueIdentifier>{8b5129e9-1c23-4c25-a561-b58c2479345a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\group\detail\data_callback">
+      <UniqueIdentifier>{b27fbfde-c624-4c5c-9dee-9b90824e1c16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\group\detail\data_callback">
+      <UniqueIdentifier>{65904570-940e-4ec5-9308-4c94e517d61b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\browser">
+      <UniqueIdentifier>{f41a5fd7-07e9-417d-8603-cca67f3212d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\browser">
+      <UniqueIdentifier>{77a9d434-900f-434d-a68f-78e32476a66c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\browser\detail">
+      <UniqueIdentifier>{2158487f-c1be-445f-b926-957f048f583a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\browser\detail">
+      <UniqueIdentifier>{d3c8700c-0a6f-4ee7-94be-f29a77625b1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\client\browser\item">
+      <UniqueIdentifier>{762ec233-bfb8-43ee-b0cb-207562b4fd0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\client\browser\item">
+      <UniqueIdentifier>{629a9ff7-7f1f-45ac-b7ca-03e71d85dd34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\utils\exception">
+      <UniqueIdentifier>{2fbb228e-8d6f-4052-85e0-a7bc0a69aca5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\zlo.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zlo_exception.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\zlo_types.hpp">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\instance\zlo_instance.hpp">
+      <Filter>include\utils\instance</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\error_obtainer\error_obtainer.hpp">
+      <Filter>include\utils\error_obtainer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\host\zlo_host.hpp">
+      <Filter>include\host</Filter>
+    </ClInclude>
+    <ClInclude Include="include\server\zlo_server.hpp">
+      <Filter>include\server</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\rpc_ping\zlo_rpc_ping.hpp">
+      <Filter>include\utils\rpc_ping</Filter>
+    </ClInclude>
+    <ClInclude Include="include\utils\logger\zlo_logger.hpp">
+      <Filter>include\utils\logger</Filter>
+    </ClInclude>
+    <ClInclude Include="include\opc\zlo_opc_instances.hpp">
+      <Filter>include\opc</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\zlo_client.hpp">
+      <Filter>include\client</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\group\zlo_group.hpp">
+      <Filter>include\client\group</Filter>
+    </ClInclude>
+    <ClInclude Include="include\session\zlo_session.hpp">
+      <Filter>include\session</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\group\detail\zlo_group_impl.hpp">
+      <Filter>include\client\group\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\group\detail\data_callback\data_callback.hpp">
+      <Filter>include\client\group\detail\data_callback</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\browser\zlo_browser.hpp">
+      <Filter>include\client\browser</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\browser\detail\zlo_browser_impl.hpp">
+      <Filter>include\client\browser\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\browser\item\zlo_browse_item.hpp">
+      <Filter>include\client\browser\item</Filter>
+    </ClInclude>
+    <ClInclude Include="include\client\group\item\zlo_group_item.hpp">
+      <Filter>include\client\group\item</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\host\zlo_host.cpp">
+      <Filter>source\host</Filter>
+    </ClCompile>
+    <ClCompile Include="source\server\zlo_server.cpp">
+      <Filter>source\server</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\rpc_ping\zlo_rpc_ping.cpp">
+      <Filter>source\utils\rpc_ping</Filter>
+    </ClCompile>
+    <ClCompile Include="source\utils\logger\zlo_logger.cpp">
+      <Filter>source\utils\logger</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\zlo_client.cpp">
+      <Filter>source\client</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\group\zlo_group.cpp">
+      <Filter>source\client\group</Filter>
+    </ClCompile>
+    <ClCompile Include="source\session\zlo_session.cpp">
+      <Filter>source\session</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\group\detail\zlo_group_impl.cpp">
+      <Filter>source\client\group\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\group\detail\data_callback\data_callback.cpp">
+      <Filter>source\client\group\detail\data_callback</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\browser\zlo_browser.cpp">
+      <Filter>source\client\browser</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\browser\detail\zlo_browser_impl.cpp">
+      <Filter>source\client\browser\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\browser\item\zlo_browse_item.cpp">
+      <Filter>source\client\browser\item</Filter>
+    </ClCompile>
+    <ClCompile Include="source\client\group\item\zlo_group_item.cpp">
+      <Filter>source\client\group\item</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

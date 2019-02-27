@@ -1,0 +1,54 @@
+// Структура параметров декремента затухания
+
+struct Ssm_str_dig_Decrement: 0x10057 {
+
+	title "Diagnostic of decrement"
+	description "Decrement diagnostic"
+	
+	u32 total_error {
+		description "Combined error value"
+		default 0
+	}
+	
+	u32 left_error {
+		description "Left boundary error"
+		control checkbox
+		default 0
+	}
+	
+	u32 right_error {
+		description "Right boundary error"
+		control checkbox
+		default 0
+	}
+	
+	u32 deviation_down {
+		description "Deviation of decrement calculeted in lower level is greater than 10%"
+		control checkbox
+		default 0
+	}
+	
+	u32 deviation_up {
+		description "Deviation of decrement calculeted in upper level is greater than 10%"
+		control checkbox
+		default 0
+	}
+	
+	u32 low_number {
+		description "Bands number in calculation is lower than 12"
+		control checkbox
+		default 0
+	}
+	
+	u32 low_resolution {
+		description "Low value of frequency resolution"
+		control checkbox
+		default 0
+	}
+	
+	u32 nan_in_result {
+		description "Results have NaN"
+		control checkbox
+		default 0
+	}
+}

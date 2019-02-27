@@ -1,0 +1,54 @@
+// Структура параметров событий, регистрируемых программой STA_LTA.exe
+// В TimeStamp заголовка абсолютное время превышения порога детектирования в UTC
+//
+struct STA_LTA_Analysis_Result: 0x10073 {
+	
+	title "Result of STA_LTA analysis"
+	description "Instant STA_LTA"
+
+    u32 numberOfChannels {
+		description "Number of channels used in program"
+		default 1
+    }
+	
+	u8 channelID_1[16] {
+		description "Channel 1 identifier"
+		default 0
+	}
+	
+	u8 channelID_2[16] {
+		description "Channel 2 identifier"
+		default 0
+	}
+	
+	u8 channelID_3[16] {
+		description "Channel 3 identifier"
+		default 0
+	}
+	
+	char unitResult[16] {
+		description "Unit of data result"
+		default 0
+	}
+	
+	float peakAmpl {
+		description "The peak value of the amplitude of the event"
+		default 0
+	}
+	
+	float durationEvent {
+		description "The duration of the event without prehistory, s"
+		default 0
+	}
+	
+	float mainPeriod {
+		description "The value of the basic period, s"
+		default 0
+	}
+	
+	
+	float dataAmpl[] {
+		description "Array of amplitude values"
+		default 0
+	}
+}

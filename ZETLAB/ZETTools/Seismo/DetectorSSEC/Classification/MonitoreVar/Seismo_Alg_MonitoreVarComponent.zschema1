@@ -1,0 +1,39 @@
+// СКСВ. Алгоритм контроля переменной составляющей
+
+struct Ssm_cfg_Algr_MonitoreVarComp: 0x10033
+{
+	description "SKSV. MonitoreConstComponent algorithm configuration."
+	title "MonitoreVarComponent"
+
+	float MaxThreshold 
+	{
+		description "Maximum threshold"
+		minimum 0.0
+	}
+	float MinThreshold
+	{
+		description "Minimum threshold"
+		minimum 0.0
+	}
+}
+
+struct Ssm_diag_Algr_MonitoreVarComp: 0x10034
+{
+	float MeanValue
+	{
+		description "variable value"
+	}
+}
+
+struct Ssm_res_Algr_MonitoreVarComp: 0x10035
+{
+	description "SKSV. MonitoreVarCopmonent result"
+	title "Variable value"
+	u32 meanval
+	{
+		description "Flag. The signal exceeded a threshold"
+		list 0, 1
+		default 0
+	}
+}
+

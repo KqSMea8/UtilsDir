@@ -1,0 +1,33 @@
+# bash style comment
+/* C style comment */
+// C++ style comment
+
+struct Ssm_res_Region: 0x1002F {
+
+	title "Region event parameters"
+	description "Region event parameters"
+
+	char regionShortName[32] {
+		description "Region Short Name"
+		control edit
+	}
+
+	group "Hypocenter coordinates"
+	double hypoLatitude {
+		description "Hypocenter Latitude, degree"
+		control edit
+	}
+	double hypoLongitude {
+		description "Hypocenter Longitude, degree"
+		control edit
+	}
+	double hypoDepth {
+		description "Hypocenter Depth, km"
+		control edit
+	}
+	
+	float magnitude {
+		description "Magnitude, Richter scale"
+		control edit
+	}
+}

@@ -1,0 +1,50 @@
+# bash style comment
+/* C style comment */
+// C++ style comment
+//-----------------------------------------------------------------------------
+struct Ssm_cfg_Algr_FindHypo: 0x10041
+{
+	description "SKSV. Configuration algorithm FindHypo"
+	title "Configuration"
+
+	float precisionLatitude{
+		description "The precision of determining the latitude of the earthquake, degree"
+		minimum 0.01
+		maximum 0.01
+		default 0.01
+		control edit
+	}
+	
+	float precisionLongitude{
+		description "The precision of determining the longitude of the earthquake, degree"
+		minimum 0.01
+		maximum 0.01
+		default 0.01
+		control edit
+	}
+	
+	float precisionDepth{
+		description "The precision of depth the longitude of the earthquake, km"
+		minimum 1.0
+		maximum 1.0
+		default 1.0
+		control edit
+	}
+	
+	float precisionT0{
+		description "The precision of time beginning of the earthquake, sec"
+		minimum 0.1
+		maximum 0.1
+		default 0.1
+		control edit
+	}
+	
+	float residualThreshold {
+		description "The threshold value of the residual, km"
+		minimum 15.0
+		maximum 50.0
+		default 20.0
+		control edit
+	}
+}
+//-----------------------------------------------------------------------------

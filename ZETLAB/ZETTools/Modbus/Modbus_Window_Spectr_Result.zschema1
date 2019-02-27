@@ -1,0 +1,34 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Modbus_Window_Spectr_Result: 0x10086
+{
+	title "Result of specral analysis"
+	description "Instant spectr"
+
+   u32 channelNode {
+		description "Channel node"
+		default 0
+	}
+	
+	f32 freq {
+		description "Freq"
+		default 0
+	}
+
+	char channelName[32] {
+		description "Channel name"
+		default ""
+	}
+		
+	float dataX[] {
+		description "Array of frequency values"
+		default 0
+	}
+
+	float dataY[] {
+		description "Array of spectr values"
+		default 0
+	}
+}

@@ -1,0 +1,66 @@
+// СКСВ. Конфигурационные параметры расчётов компонента "Детектор"
+//
+struct Ssm_cfg_Detector_Calc: 0x10049 {
+	
+	float timeAverTxyz {
+		description "Time averaging for calculation main periods, sec"
+		default 0.5
+		control edit
+		minimum 0.1
+		maximum 2.0
+	}
+ 
+	float timeAverZigZag {
+		description "Time zig-zag for determination extremum, sec"
+		default 1.0
+		control edit
+		minimum 0.5
+		maximum 5.0
+	}
+	
+	u32 levelFDWT {
+		description "Level FDWT for wavelet-filtration"
+		default 4
+		control combobox
+		list 4, 5, 6, 7, 8, 9, 10
+	}
+	
+	u32 typeFDWT {
+		description "Type FDWT for wavelet-filtration"
+		default 2
+		control combobox
+		string_list "Haar", "db1", "db2", "db3", "db4", "db5", "db6", "db7", "db8", "db9", "db10", "sym1", "sym2", "sym3", "sym4", "sym5", "sym6", "sym7", "coif1", "coif2", "coif3", "coif4", "coif5"
+	}
+	
+	float bandFreqForMagn_F1 {
+		description "Frequency band for calculation magnitude, low value, Hz"
+		default 0.2
+		control edit
+		minimum 0.1
+		maximum 2.0
+	}
+	
+	float bandFreqForMagn_F2 {
+		description "Frequency band for calculation magnitude, high value, Hz"
+		default 20.0
+		control edit
+		minimum 10.0
+		maximum 30.
+	}
+	
+	float accelThreshold {
+		description "The value of acceleration threshold, m/c2"
+		default 0.03
+		control edit
+		minimum 0.001
+		maximum 0.3
+	}
+	
+	float numZeroMax {
+		description "The allowable number of zero values signal, percent"
+		default 17.0
+		control edit
+		minimum 5.0
+		maximum 50.0	
+	}
+}

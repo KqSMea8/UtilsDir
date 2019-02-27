@@ -1,0 +1,58 @@
+struct Lds_cfg_Detector_Pressure: 0x10091 {
+	// общие параметры
+	u32 typeDtct {
+		description "The type of detector (0 - Const, 1 - Gradient)"
+		default 0
+		minimum 0
+		maximum 2	
+	}
+	
+	float timePreHistory {
+		description "The size of pre-history, sec"
+		default 20
+		minimum 10
+		maximum 500
+	}
+	
+	float freqADC {
+		description "The frequency of ADC, Hz"
+		default 100.0
+		minimum 40.0
+		maximum 2500.0
+	}
+
+	float timeSTA {
+		description "Duration short time, sec"
+		default 10.0
+		minimum 1.0
+		maximum 3600.0
+	}
+	
+	float timeLTA {
+		description "Duration long time, sec"
+		default 10.0
+		minimum 1.0
+		maximum 3600.0
+	}
+	
+	float thresholdForSTA_LTA {
+		description "The threshold of detector STA/LTA"
+		default 3.0
+		minimum 0.0
+		maximum 60.0
+	}
+
+	float minDurationEventSTA_LTA {
+		description "Minimum the event duration of detector STA/LTA, sec"		
+		default 20
+		minimum 10
+		maximum 99.0
+	}
+	
+	float factorSTA_LTA {
+		description "The factor of detector STA/LTA"
+		default 0.4
+		minimum 0.2
+		maximum 0.99
+	}
+}

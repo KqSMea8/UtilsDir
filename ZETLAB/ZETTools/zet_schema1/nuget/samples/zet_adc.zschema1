@@ -1,0 +1,119 @@
+struct ZetAdc: 0x100 {
+
+	title "ADC"
+	description "ADC settings"
+
+	group "Common"
+	char name[128] {
+		description "Channel name"
+		control edit
+		default "Channel"
+	}
+	float frequency {
+		description "Channel frequency, Hz"
+		default 25000
+		control combobox
+		list 25000, 5000
+	}
+
+	group "Flags"
+	u32 flag1 {
+		description "Flag 1"
+		control checkbox
+	}
+	u32 flag2 {
+		description "Flag 2"
+		control checkbox
+	}
+
+	end_group
+
+	const float abc = 10, 20
+
+	u32 enabled {
+		description "Enabled"
+		control checkbox
+		default 0
+	}
+
+	u32 icp {
+		description "ICP"
+		control checkbox
+		default 0
+	}
+
+	u32 sine {
+		description "Sine generation"
+		control checkbox
+		default 0
+	}
+
+	u32 teds {
+		description "TEDS"
+		control checkbox
+		default 0
+	}
+
+	s32 start_time {
+		description "Start time"
+		control time
+		readonly true
+	}
+
+	float some_formula {
+		description "Test formula"
+		# by default, default is 0 or empty string
+		expression "frequency * 2 + abc[2]"
+		readonly true
+	}
+
+	char test_string[4] {
+		description "Some short string"
+	}
+}
+
+struct ZetAdcMux: 0x101 {
+
+	title "ADC mux"
+	description "ADC multiplexer settings"
+
+	u32 source {
+		description "Selected channel"
+		control combobox
+		string_list "1", "2", "3", "4", "5", "6", "7", "8"
+	}
+
+	float frequency {
+		description "Frequency, Hz"
+		default 125000
+		readonly true
+	}
+
+	group "Control"
+
+	u32 enabled {
+		description "Enabled"
+		control checkbox
+		default 1
+	}
+
+	u32 icp {
+		description "ICP"
+		control checkbox
+		default 0
+	}
+
+	u32 sine {
+		description "Sine generation"
+		control checkbox
+		default 0
+	}
+
+	u32 teds {
+		description "TEDS"
+		control checkbox
+		default 0
+	}
+
+	end_group
+}

@@ -1,0 +1,41 @@
+struct ZetChannelControl : 0xfe {
+	u32 status {
+
+	}
+	u32 channel_type
+}
+
+struct ZetFloatSamplingChannel : 0xf5 {
+	title "Channel"
+	description "Floating-point sampling channel info"
+	readonly true
+
+	u32 active {
+		description "Activity flag"
+		hidden true
+		readonly false
+	}
+	u32 session {
+		description "Stream session"
+		hidden true
+	}
+	char name[64] {
+		description "Channel name"
+	}
+	char unit[16] {
+		description "Measuring units"
+	}
+	float rate {
+		description "Sampling rate, Hz"
+	}
+	float max_level {
+		description "Maximal level, units"
+	}
+	float resolution {
+		description "Sample resolution, units"
+		minimum 1e-32
+	}
+	float reference {
+		description "Source reference, units"
+	}
+}

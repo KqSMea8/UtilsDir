@@ -1,0 +1,38 @@
+struct Lds_res_Detector_Pressure: 0x10092 {
+
+	u32 objectID {
+		description "ID sensor"
+	}
+	
+	float peakSignal {
+		description "The peak value of signal"
+	}
+
+	float valueSta {
+		description "The peak value of STA"
+	}
+
+	float valueLta {
+		description "The peak value of LTA"
+	}
+
+	float stdDevSta {
+		description "The peak value of standart deviation STA"
+	}
+
+	float stdDevLta {
+		description "The peak value of standart deviation LTA"
+	}
+	
+	float peakStDev {
+		description "The peak value of standard deviation"
+	}
+	
+	float peakEnvelope {
+		description "The peak value of envelope"
+	}
+
+	float peakStaLtaDiff {
+		description "The peak value of StaLta diff"
+	}
+}

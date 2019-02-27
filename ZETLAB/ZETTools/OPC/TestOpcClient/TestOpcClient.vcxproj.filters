@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="resource">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="resource\icons">
+      <UniqueIdentifier>{7a2ae6c4-d6fa-4d6d-bb86-22aea61c7379}</UniqueIdentifier>
+      <Extensions>ico</Extensions>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{90cf4454-030d-4d3d-a822-c95a375a463c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui">
+      <UniqueIdentifier>{285b4c05-0f7f-46c6-bb71-fb7a8077a2ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\application">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="precompiller">
+      <UniqueIdentifier>{5102a8a3-e863-4aa6-a2ff-5c310d62cc4e}</UniqueIdentifier>
+      <Extensions>cpp;h</Extensions>
+    </Filter>
+    <Filter Include="source\gui\connect">
+      <UniqueIdentifier>{c99c3839-861a-42d3-9369-d9fd2fc19657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\connect\host_tree">
+      <UniqueIdentifier>{56c03404-f573-405b-9332-49dbfc23fa3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\utils">
+      <UniqueIdentifier>{e381490f-1415-41a2-85ab-21bafdc3d0b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\utils\tree">
+      <UniqueIdentifier>{ee3451ad-35ae-4aab-b090-ffd65e34d593}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\algo">
+      <UniqueIdentifier>{529f425c-f06c-429e-a1b5-6bee34419c1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\algo\network">
+      <UniqueIdentifier>{721e73fa-efba-41bb-8078-ac007d5ed8b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\rpc_ping">
+      <UniqueIdentifier>{a65d3547-b57d-407a-a92f-18d8ed819ea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\icons\windows">
+      <UniqueIdentifier>{82b7bab9-73d2-45bd-8027-c1d377a7353e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\icons\enteties">
+      <UniqueIdentifier>{cabc296f-d7b6-461b-a066-cee1684cc8f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\icons\statuses">
+      <UniqueIdentifier>{4b9e2cc6-2964-4cbc-ba2c-ffdc6bd2d555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main\client_tree_view">
+      <UniqueIdentifier>{376a5721-da59-4e1f-bf95-5ff8b6733e51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main\client_tree_view\client_tree">
+      <UniqueIdentifier>{0abc125e-492a-4470-9d90-5b2bc5a54747}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main\tag_overview">
+      <UniqueIdentifier>{e766f9ce-bc7b-4e40-a41c-564e829bf551}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\utils\list">
+      <UniqueIdentifier>{6d3eeb9b-ade7-488c-880a-6d37b2d073f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main\tag_overview\tag_list">
+      <UniqueIdentifier>{b8071c44-653a-4f6c-bc7c-66d0bba84070}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\utils\toolbar">
+      <UniqueIdentifier>{6c137c4a-9161-4823-b73e-ed83383948c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main\main_toolbar">
+      <UniqueIdentifier>{943b6a78-ab53-404a-89b3-f4d0a95d95c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\toolbars">
+      <UniqueIdentifier>{6e474e07-b4bd-4c81-b2f0-79f2d1779350}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource\icons\misc">
+      <UniqueIdentifier>{fdb3e122-3961-438b-8306-8c5138ad106f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\main\tag_overview\tag_properties">
+      <UniqueIdentifier>{bbd22bfc-a224-4131-8cbc-1732e10393ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\settings">
+      <UniqueIdentifier>{6565750c-3325-4d0f-8608-ca90fca14049}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\settings\tabs">
+      <UniqueIdentifier>{298642c5-0c16-481f-a3ed-fbfdaf591c30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\utils\tab">
+      <UniqueIdentifier>{e2e98dbb-8306-4bd4-bcc6-591bea4436f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\settings\tabs\tag_overview">
+      <UniqueIdentifier>{5bddfcd2-68ca-4bd4-9a83-e631f5f75762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\gui\settings\tabs\tag_overview\rule_list">
+      <UniqueIdentifier>{6f77a194-4292-42ba-bc20-d30b6e5089d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\algo\highlight_rule">
+      <UniqueIdentifier>{fd2b852a-10fb-4ab1-8572-05fcfd1ca1e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\algo\pugixml">
+      <UniqueIdentifier>{4c9a5ab1-7127-45ce-91c9-af25e6fa1aec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\algo\ico_generator">
+      <UniqueIdentifier>{32cceaee-790d-4a6c-99ba-3182a7c714c4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resource\icons\windows\connect.ico">
+      <Filter>resource\icons\windows</Filter>
+    </None>
+    <None Include="resource\icons\enteties\host.ico">
+      <Filter>resource\icons\enteties</Filter>
+    </None>
+    <None Include="resource\icons\windows\main.ico">
+      <Filter>resource\icons\windows</Filter>
+    </None>
+    <None Include="resource\icons\enteties\network.ico">
+      <Filter>resource\icons\enteties</Filter>
+    </None>
+    <None Include="resource\icons\enteties\opc-server.ico">
+      <Filter>resource\icons\enteties</Filter>
+    </None>
+    <None Include="resource\icons\windows\rpc-ping.ico">
+      <Filter>resource\icons\windows</Filter>
+    </None>
+    <None Include="resource\icons\statuses\status-bad.ico">
+      <Filter>resource\icons\statuses</Filter>
+    </None>
+    <None Include="resource\icons\statuses\status-good.ico">
+      <Filter>resource\icons\statuses</Filter>
+    </None>
+    <None Include="resource\icons\statuses\status-uncertain.ico">
+      <Filter>resource\icons\statuses</Filter>
+    </None>
+    <None Include="resource\icons\enteties\node.ico">
+      <Filter>resource\icons\enteties</Filter>
+    </None>
+    <None Include="resource\icons\enteties\tag.ico">
+      <Filter>resource\icons\enteties</Filter>
+    </None>
+    <None Include="resource\toolbars\main.bmp">
+      <Filter>resource\toolbars</Filter>
+    </None>
+    <None Include="resource\icons\misc\disconnect.ico">
+      <Filter>resource\icons\misc</Filter>
+    </None>
+    <None Include="resource\icons\windows\dcom-configurator.ico">
+      <Filter>resource\icons\windows</Filter>
+    </None>
+    <None Include="resource\icons\windows\tag-properties.ico">
+      <Filter>resource\icons\windows</Filter>
+    </None>
+    <None Include="resource\icons\windows\settings.ico">
+      <Filter>resource\icons\windows</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>precompiller</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>precompiller</Filter>
+    </ClInclude>
+    <ClInclude Include="resource\resource.h">
+      <Filter>resource</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\utils\tree\tree.h">
+      <Filter>source\gui\utils\tree</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\connect\host_tree\host_tree.h">
+      <Filter>source\gui\connect\host_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="source\algo\network\network.hpp">
+      <Filter>source\algo\network</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\client_tree_view\client_tree\client_tree.h">
+      <Filter>source\gui\main\client_tree_view\client_tree</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\client_tree_view\client_tree_view.h">
+      <Filter>source\gui\main\client_tree_view</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\tag_overview\tag_overview.h">
+      <Filter>source\gui\main\tag_overview</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\utils\list\list.h">
+      <Filter>source\gui\utils\list</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\tag_overview\tag_list\tag_list.h">
+      <Filter>source\gui\main\tag_overview\tag_list</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\utils\toolbar\toolbar.h">
+      <Filter>source\gui\utils\toolbar</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\main_toolbar\main_toolbar.h">
+      <Filter>source\gui\main\main_toolbar</Filter>
+    </ClInclude>
+    <ClInclude Include="source\application\application.h">
+      <Filter>source\application</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\main_dlg.h">
+      <Filter>source\gui\main</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\rpc_ping\rpc_ping_dlg.h">
+      <Filter>source\gui\rpc_ping</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\connect\connect_dlg.h">
+      <Filter>source\gui\connect</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\main\tag_overview\tag_properties\tag_properties_dlg.h">
+      <Filter>source\gui\main\tag_overview\tag_properties</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\settings\settings_dlg.h">
+      <Filter>source\gui\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\utils\tab\default_tab.h">
+      <Filter>source\gui\utils\tab</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\utils\tab\tabs.h">
+      <Filter>source\gui\utils\tab</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\settings\tabs\tag_overview\settings_tag_overview_tab.h">
+      <Filter>source\gui\settings\tabs\tag_overview</Filter>
+    </ClInclude>
+    <ClInclude Include="source\gui\settings\tabs\tag_overview\rule_list\rule_list.h">
+      <Filter>source\gui\settings\tabs\tag_overview\rule_list</Filter>
+    </ClInclude>
+    <ClInclude Include="source\algo\hightlight_rule\hightlight_rule.hpp">
+      <Filter>source\algo\highlight_rule</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\ZETTools\pugixml-1.0\src\pugiconfig.hpp">
+      <Filter>source\algo\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\ZETTools\pugixml-1.0\src\pugixml.hpp">
+      <Filter>source\algo\pugixml</Filter>
+    </ClInclude>
+    <ClInclude Include="source\algo\ico_generator\ico_generator.hpp">
+      <Filter>source\algo\ico_generator</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>precompiller</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\connect\host_tree\host_tree.cpp">
+      <Filter>source\gui\connect\host_tree</Filter>
+    </ClCompile>
+    <ClCompile Include="source\algo\network\network.cpp">
+      <Filter>source\algo\network</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\client_tree_view\client_tree\client_tree.cpp">
+      <Filter>source\gui\main\client_tree_view\client_tree</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\client_tree_view\client_tree_view.cpp">
+      <Filter>source\gui\main\client_tree_view</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\tag_overview\tag_overview.cpp">
+      <Filter>source\gui\main\tag_overview</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\tag_overview\tag_list\tag_list.cpp">
+      <Filter>source\gui\main\tag_overview\tag_list</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\main_toolbar\main_toolbar.cpp">
+      <Filter>source\gui\main\main_toolbar</Filter>
+    </ClCompile>
+    <ClCompile Include="source\application\application.cpp">
+      <Filter>source\application</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\main_dlg.cpp">
+      <Filter>source\gui\main</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\rpc_ping\rpc_ping_dlg.cpp">
+      <Filter>source\gui\rpc_ping</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\connect\connect_dlg.cpp">
+      <Filter>source\gui\connect</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\main\tag_overview\tag_properties\tag_properties_dlg.cpp">
+      <Filter>source\gui\main\tag_overview\tag_properties</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\settings\settings_dlg.cpp">
+      <Filter>source\gui\settings</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\settings\tabs\tag_overview\settings_tag_overview_tab.cpp">
+      <Filter>source\gui\settings\tabs\tag_overview</Filter>
+    </ClCompile>
+    <ClCompile Include="source\gui\settings\tabs\tag_overview\rule_list\rule_list.cpp">
+      <Filter>source\gui\settings\tabs\tag_overview\rule_list</Filter>
+    </ClCompile>
+    <ClCompile Include="source\algo\hightlight_rule\hightlight_rule.cpp">
+      <Filter>source\algo\highlight_rule</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\ZETTools\pugixml-1.0\src\pugixml.cpp">
+      <Filter>source\algo\pugixml</Filter>
+    </ClCompile>
+    <ClCompile Include="source\algo\ico_generator\ico_generator.cpp">
+      <Filter>source\algo\ico_generator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource\resource.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

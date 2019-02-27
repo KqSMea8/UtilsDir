@@ -1,0 +1,71 @@
+// Структура параметров декремента затухания
+
+struct Ssm_str_res_Decrement: 0x10056 {
+
+	title "Result of decremnt"
+	description "Decrement result"
+	
+	float frequency[2] {
+		description "Weighted average value of resonance frequency, Hz"
+		control edit
+		inaccuracy
+		default 0
+	}
+
+	float peak {
+		description "Peak value of resonance spectr"
+		control edit
+		default 0
+	}
+
+	float energy {
+		description "Energy value of resonance peak"
+		control edit
+		default 0
+	}
+	
+	float deviation {
+		description "Deviation on resonance frquency"
+		control edit
+		default 0
+	}
+	
+	float skewness {
+		description "Prevaling side of spectr"
+		control edit
+		default 0
+	}
+	
+	float kurtosis {
+		description "Sharpness of spectr peak"
+		control edit
+		default -3
+	}
+	
+	float qfactor {
+		description "Quality factor of resonance"
+		control edit
+		default 0
+	}
+	
+	float decrement[2] {
+		description "Logarifmic decrement of damping"
+		control edit
+		inaccuracy
+		default 0
+        minimum 0.0
+        maximum 1.0
+	}
+	
+	float snr {
+		description "Signal to noise ratio"
+		control edit
+		default 0
+	}
+
+        u32 number {
+		description "Number of results used in calculation"
+		control edit
+		default 0
+        }
+}

@@ -1,0 +1,16 @@
+// СКСВ. Алгоритм контроля однополярных щелчков
+
+struct Ssm_cfg_Algr_UnipolarClick: 0x10036
+{
+	description "SKSV.UnipolarClick algorithm configuration."
+	title "UnipolarClick"
+
+	float thresholdRatio
+	{
+		description "Relation of thresholds"
+		default 3.0
+		control edit
+		minimum 1.0
+		maximum 100.0
+	}
+}

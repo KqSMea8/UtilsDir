@@ -1,0 +1,16 @@
+// СКСВ. Алгоритм классификации ложных событий, по анализу пиковых значений перемещения
+
+struct Ssm_cfg_AlgrStation_Motion: 0x10029
+{
+	description "SKSV. The configuration value of algorithm of classification station event by motion peak value"
+	title "Peak motion algorithm configuration"
+
+	float thresholdRatio
+	{
+		description "The threshold value for Ratio motion peak value"
+		default 10.
+		control edit
+		minimum 2
+		maximum 100.0
+	}	
+}

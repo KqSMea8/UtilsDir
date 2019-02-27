@@ -1,0 +1,61 @@
+# bash style comment
+/* C style comment */
+// C++ style comment
+
+struct Ssm_cfg_Region: 0x1003D {
+
+	title "Region configuration"
+	description "Region configuration"
+
+	char regionShortName[32] {
+		description "Region Short Name"
+		control edit
+		default "Region MSK"
+	}
+
+	group "Region coordinates"
+	double minLatitude{
+		description "Min region latitude, degree"
+		minimum -90.0
+		maximum 90.0
+		default 50.0
+		control edit
+	} 
+	double maxLatitude{
+		description "Max region latitude, degree"
+		minimum -90.0
+		maximum 90.0
+		default 60.0
+		control edit
+	}
+	double minLongitude{
+		description "Min region longitude, degree"
+		minimum -180.0
+		maximum 180.0
+		default 32
+		control edit
+	}
+	double maxLongitude{
+		description "Max region longitude, degree"
+		minimum -180.0
+		maximum 180.0
+		default 42
+		control edit
+	}
+	end_group
+	
+	u32 eventTimeWindow {
+		description "Event time window, sec"
+		minimum 10
+		maximum 500
+		default 300
+		control edit
+	}
+
+	u32 bNeedOutputDebug {
+		description "Need OutputDebug data"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+}

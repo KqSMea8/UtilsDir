@@ -1,0 +1,65 @@
+struct ZetSimAdc : 0x1002b {
+	title "ADC"
+	description "ADC simulator - general settings"
+
+	char name[128] {
+		description "Channel name"
+	}
+
+	float max_level {
+		description "Maximal level, V"
+		default 10
+	}
+	float rate {
+		description "Sampling rate, Hz"
+		control combobox
+		list 5e3, 25e3, 50e3, 100e3, 250e3, 500e3, 1000e3
+	}
+}
+
+struct ZetSimAdcSine : 0x1002c {
+	title "Sine"
+	description "ADC simulator - internal sine wave source"
+
+	u32 enabled {
+		description "Enable sine wave source"
+		control checkbox
+	}
+	float frequency {
+		description "Frequency (f), Hz"
+		control combobox
+		default 1000
+		readonly true
+	}
+	float amplitude {
+		description "Amplitude (A), V"
+		minimum 0
+		default 1
+		readonly true
+	}
+	float offset {
+		description "Offset (D), V"
+		readonly true
+	}
+	float phase {
+		description "Phase (φ), -2..2 π"
+		minimum -2
+		maximum +2
+		readonly true
+	}
+}
+
+struct ZetSimAdcPwm : 0x1002d {
+	title "PWM"
+	description "ADC simulator - internal PWM source"
+
+	u32 enabled {
+		description "Enable PWM source"
+		control checkbox
+	}
+}
+
+/*
+struct ZetVirtualVoltmeterDC: 0x1002c {
+}
+*/

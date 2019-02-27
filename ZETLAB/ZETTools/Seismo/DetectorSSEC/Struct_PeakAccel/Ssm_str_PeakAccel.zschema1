@@ -1,0 +1,70 @@
+// СКСВ. Структура параметров ежесекундных пиковых ускорений одного датчика
+// В TimeStamp заголовка абсолютное время данных
+//
+struct Ssm_str_PeakAccel: 0x1003B {
+	
+	u32 objectID {
+		description "ID sensor"
+	}
+	
+	s32 quality {
+		description "The quality of data"
+	}
+	
+	float peakAccelX {
+		description "The peak value of the X-acceleration, m/c2"
+	}
+
+	float peakAccelY {
+		description "The peak value of the Y-acceleration, m/c2"
+	}
+	
+	float peakAccelZ {
+		description "The peak value of the Z-acceleration, m/c2"
+	}
+
+	float peakAccelA {
+		description "The peak value of the Ampl-acceleration, m/c2"
+	}
+	
+	float peakVelocityX {
+		description "The peak value of the X-velocity, m/c"
+	}
+
+	float peakVelocityY {
+		description "The peak value of the Y-velocity, m/c"
+	}
+
+	float peakVelocityZ {
+		description "The peak value of the Z-velocity, m/c"
+	}
+
+	float peakVelocityA {
+		description "The peak value of the Ampl-velocity, m/c"
+	}
+
+	float peakMotionX {
+		description "The peak value of the X-motion, mm"
+	}
+	
+	float peakMotionY {
+		description "The peak value of the Y-motion, mm"
+	}
+	
+	float peakMotionZ {
+		description "The peak value of the Z-motion, mm"
+	}
+	
+	float peakMotionA {
+		description "The peak value of the Ampl-motion, mm"
+	}
+
+    u32 intensity {
+		description "Intensity, MSK-64"
+		control edit
+		minimum 0
+		maximum 12
+		default 0
+	}
+
+}

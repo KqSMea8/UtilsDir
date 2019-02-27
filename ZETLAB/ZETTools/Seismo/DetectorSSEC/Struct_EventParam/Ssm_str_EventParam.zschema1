@@ -1,0 +1,164 @@
+// СКСВ. Структура параметров события, детектированного одним датчиком
+// В TimeStamp заголовка абсолютное время начала события (Tp)
+//
+struct Ssm_str_EventParam: 0x10019 {
+	
+	u32 objectID {
+		description "ID sensor"
+		minimum 0
+		default 1
+		control edit
+	}
+	
+	s32 typeEvent {
+		description "The type of event"
+		minimum -1
+		maximum 0
+		default 7
+		control edit
+	}
+
+	float peakAccelX {
+		description "The peak value of the X-acceleration of the event, m/c2"
+		minimum 0
+		maximum 19
+		default 0
+		control edit
+	}
+	
+	float peakAccelY {
+		description "The peak value of the Y-acceleration of the event, m/c2"
+		minimum 0
+		maximum 19
+		default 0
+		control edit
+	}
+	
+	float peakAccelZ {
+		description "The peak value of the Z-acceleration of the event, m/c2"
+		minimum 0
+		maximum 19
+		default 0
+		control edit
+	}
+	
+	float peakAccelA {
+		description "The peak value of the Ampl-acceleration of the event, m/c2"
+		minimum 0
+		maximum 19
+		default 0
+		control edit
+	}
+	
+	float peakVelocityX {
+		description "The peak value of the X-velocity of the event, m/c"
+		minimum 0
+		default 0
+		control edit
+	}
+
+	float peakVelocityY {
+		description "The peak value of the Y-velocity of the event, m/c"
+		minimum 0
+		default 0
+		control edit
+	}
+
+	float peakVelocityZ {
+		description "The peak value of the Z-velocity of the event, m/c"
+		minimum 0
+		default 0
+		control edit
+	}
+
+	float peakVelocityA {
+		description "The peak value of the Ampl-velocity of the event, m/c"
+		minimum 0
+		default 0
+		control edit
+	}
+
+	float peakMotionX {
+		description "The peak value of the X-motion of the event, mm"
+		minimum 0
+		maximum 100
+		default 0
+		control edit
+	}
+	
+	float peakMotionY {
+		description "The peak value of the Y-motion of the event, mm"
+		minimum 0
+		maximum 100
+		default 0
+		control edit
+	}
+	
+	float peakMotionZ {
+		description "The peak value of the Z-motion of the event, mm"
+		minimum 0
+		maximum 100
+		default 0
+		control edit
+	}
+	
+	float peakMotionA {
+		description "The peak value of the Ampl-motion of the event, mm"
+		minimum 0
+		maximum 100
+		default 0
+		control edit
+	}
+	
+	float mainPeriodX {
+		description "The main X-period of the event, sec"
+		minimum 0.01
+		maximum 100
+		default 1
+		control edit
+	}
+	
+	float mainPeriodY {
+		description "The main Y-period of the event, sec"
+		minimum 0.01
+		maximum 100
+		default 1
+		control edit
+	}
+	
+	float mainPeriodZ {
+		description "The main Z-period of the event, sec"
+		minimum 0.01
+		maximum 100
+		default 1
+		control edit
+	}
+	
+	float signalSrcSNR {
+		description "The SNR of the source signal"
+		minimum 0.01
+		maximum 100
+		default 1
+		control edit
+	}
+	
+	double dTps {
+		description "The difference between the time of entry into P- and S-phase, sec"
+		minimum -1
+		maximum 100
+		default 0
+		control edit
+	}
+	
+	double durationEvent {
+		description "The duration of the event without prehistory, sec"
+		minimum 0
+		maximum 250
+		default 0
+		control edit	
+	}
+	
+	double endEventTimeSRV {
+		description "Time server end of the event, sec"
+	}
+}

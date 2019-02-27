@@ -1,0 +1,34 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Correlation_Analysis_Result: 0x10075
+{
+	title "Result of correlation analysis"
+	description "Instant correlation"
+
+	u8 channelID_0[16] {
+		description "Identifier of first channel"
+		default 0
+	}
+	
+	u8 channelID_1[16] {
+		description "Identifier of second channel"
+		default 0
+	}
+	
+	u16 indexKit {
+		description "Index of kit"
+		default 0
+	}
+	
+	u8 typeFuncView {
+		description "Type of displayed function"
+		default 0	
+	}
+	
+	float result[] {
+		description "Result"
+		default 0
+	}
+}

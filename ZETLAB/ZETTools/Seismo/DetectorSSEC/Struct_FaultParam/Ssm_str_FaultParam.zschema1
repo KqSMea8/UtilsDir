@@ -1,0 +1,14 @@
+// СКСВ. Структура параметров неисправностей одного датчика
+// В TimeStamp заголовка абсолютное время обнаружения неисправности
+//
+struct Ssm_str_FaultParam: 0x1001A {
+	
+	u32 objectID {
+		description "ID sensor"
+		minimum 1
+	}
+	
+	u32 typeFault {
+		description "The type of fault"
+	}	
+}

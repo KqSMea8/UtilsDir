@@ -1,0 +1,181 @@
+// Структура параметров события сейсмостанции
+
+struct Ssm_str_EventStation: 0x1002D {
+
+	title "Station event parameters"
+	description "Station event parameters"
+
+	u32 objectID {
+		description "ID station"
+		minimum 0
+		default 1
+		control edit
+	}
+	
+	char shortName[32] {
+		description "Station Short Name"
+		control edit
+		default "Station 1"
+	}
+
+	group "Station coordinates"
+	double latitude {
+		description "Station Latitude, degrees"
+		control edit
+		minimum -90.0
+		maximum 90.0
+		default 55.59
+	}
+	double longitude {
+		description "Station Longitude, degrees"
+		control edit
+		minimum -180.0
+		maximum 180.0
+		default 37.13
+	}
+	double altitude {
+		description "Station Altitude, meters above sea level"
+		control edit
+		minimum -417.5
+		maximum 8848.0
+		default 150.0
+	}
+	end_group
+
+	u32 typeEvent {
+		description "Event Code"
+		control combobox
+		string_list "Low", "Strong"
+	}
+	
+	u32 operationCode {
+		description "Station Operation Code"
+		control combobox
+		string_list "Normal", "Simulation", "TestSensors"
+	}
+	float velocityP {
+		description "VelocityP, km/s"
+		control edit
+		minimum 6.8
+		maximum 6.8
+		default 6.8
+	}
+	float magnitude {
+		description "The value of magnitude of the earthquake, unit Richter scale"
+		control edit
+		minimum 0.0
+		maximum 9.0
+		default 0.
+	}
+	float distance {
+		description "The value of distance to hypocenter, km"
+		control edit
+		default 0.
+	}
+	float intensity {
+		description "Intensity, MSK-64"
+		control edit
+		minimum 0.0
+		maximum 12.0
+		default 0.
+	}
+
+	float peakAccelX {
+		description "The peak value of the X-acceleration of the event, m/c2"
+	}
+	
+	float peakAccelY {
+		description "The peak value of the Y-acceleration of the event, m/c2"
+	}
+	
+	float peakAccelZ {
+		description "The peak value of the Z-acceleration of the event, m/c2"
+	}
+	
+	float peakAccelA {
+		description "The peak value of the Ampl-acceleration of the event, m/c2"
+	}
+	
+	float peakVelocityX {
+		description "The peak value of the X-velocity of the event, m/c"
+	}
+
+	float peakVelocityY {
+		description "The peak value of the Y-velocity of the event, m/c"
+	}
+
+	float peakVelocityZ {
+		description "The peak value of the Z-velocity of the event, m/c"
+	}
+
+	float peakVelocityA {
+		description "The peak value of the Ampl-velocity of the event, m/c"
+	}
+
+	float peakMotionX {
+		description "The peak value of the X-motion of the event, mm"
+	}
+	
+	float peakMotionY {
+		description "The peak value of the Y-motion of the event, mm"
+	}
+	
+	float peakMotionZ {
+		description "The peak value of the Z-motion of the event, mm"
+	}
+	
+	float peakMotionA {
+		description "The peak value of the Ampl-motion of the event, mm"
+	}
+	
+	float mainPeriodX {
+		description "The main X-period of the event, sec"
+	}
+
+	float mainPeriodY {
+		description "The main Y-period of the event, sec"
+	}
+
+	float mainPeriodZ {
+		description "The main Z-period of the event, sec"
+	}
+
+	float signalSrcSNR {
+		description "The SNR of the source signal"
+	}
+
+    double mileage {
+		description "Station pipe mileage, kilometers"
+		control edit
+		minimum 0.0
+		maximum 10000.0
+		default 0.0
+	}
+	
+	group "The coefficients for calculating the magnitude"
+	float magn_A {
+		description "multiplikatiynfy factor for calculating the magnitude"
+		minimum 2.0
+		maximum 2.0
+		default 2.0
+		control edit
+	}
+	
+	float magn_B {
+		description "additive factor for calculating the magnitude"
+		minimum 2.1
+		maximum 2.5
+		default 2.3
+		control edit
+	}
+	
+	float magn_C {
+		description "correction factor for calculating the magnitude"
+		minimum -2.0
+		maximum 2.0
+		default 0.0
+		control edit
+	}
+	
+	end_group
+}

@@ -1,0 +1,71 @@
+// СКСВ. Конфигурационные параметры датчика компонента "Детектор"
+//
+struct Lds_cfg_Pressure_Sensor: 0x10090 {
+	
+	u32 objectID {
+		description "ID sensor"
+		default 1
+		control edit
+		minimum 1
+	}
+	
+	u32 bActivate {
+		description "Work sensor (0 - off, 1 - on)"
+		default 1
+		control combobox
+		list 0, 1	
+	}	
+	
+	float coordinate {
+		description "Coordinate, m"
+		default 0
+		minimum 0.0
+		maximum 10000000.0
+		control edit
+	}
+	
+	float minValue {
+		description "The minimum value of channel pressure, kPa"
+		default 0
+		minimum 0
+		maximum 100000
+		control edit
+	}
+	
+	float maxValue {
+		description "The maximum value of channel pressure, kPa"
+		default 0
+		minimum 0
+		maximum 100000
+		control edit
+	}
+	
+	u32 bNeedDiagn {
+		description "Need diagnostic data"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedOutputDebug {
+		description "Need OutputDebug data"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedDTU {
+		description "Need DTU-files"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedCopySecStrToLogger {
+		description "Need copy second struct to logger"
+		default 1
+		control combobox
+		list 0, 1	
+	}
+	
+}

@@ -1,0 +1,14 @@
+// СКСВ. Алгоритм определения ложных событий, по анализу соотношения амплитуд компонент
+
+struct Ssm_cfg_Algr_AmplRatio: 0x10022 {
+	description "SKSV. AmplRatio algorithm configuration."
+	title "AmplRatio configuration"
+
+	float thresholdAmpl {
+		description "The threshold value for amplitude"
+		default 10.0
+		control edit
+		minimum 5.0
+		maximum 100.0
+	}	
+}

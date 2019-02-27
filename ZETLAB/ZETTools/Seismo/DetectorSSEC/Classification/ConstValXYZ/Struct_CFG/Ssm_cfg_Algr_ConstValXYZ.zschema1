@@ -1,0 +1,16 @@
+// СКСВ. Алгоритм контроля постоянной составляющей сигналов X, Y, Z
+
+struct Ssm_cfg_Algr_ConstValXYZ: 0x10030
+{
+	description "SKSV. ConstValXYZ algorithm configuration"
+	title "ConstValXYZ"
+
+	float maxValue 
+	{
+		description "Maximum value"
+		control edit
+		default 0.4
+		minimum 0.2
+		maximum 2.0
+	}
+}

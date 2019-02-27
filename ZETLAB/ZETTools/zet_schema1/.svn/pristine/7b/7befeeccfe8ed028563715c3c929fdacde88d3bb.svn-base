@@ -1,0 +1,69 @@
+# Примеры динамических структур.
+# Обратите внимание на запись "[]", которая обозначает динамическое поле.
+# Динамическим полем может быть только самое последнее поле или несколько последних полей.
+
+struct ZetFloatStream: 0x1000 {
+
+	title "Поток вещественных чисел"
+
+	u32 session {
+		description "Идентификатор сеанса передачи"
+	}
+
+	# Количество data может быть любым (0 и выше)
+	float data[] {
+		description "Числа"
+	}
+}
+
+struct ZetComplexStream: 0x100000 {
+	title "Поток комплексных чисел"
+
+	u32 session
+
+	# Повторяться будут пары { float real; float im; }
+	float real[] {
+		description "Действительная часть"
+	}
+
+	float im[] {
+		description "Мнимая часть"
+	}
+}
+
+struct ZetIcon: 0x22222 {
+	title "Иконка"
+
+	char name[128] {
+		description "Название иконки"
+	}
+	u32 width {
+		description "Длина иконки, пикселов"
+	}
+	u32 height {
+		description "Ширина иконки, пикселов"
+	}
+
+	# Развертка ( RGBH [height] [width])
+	u8 r[]
+	u8 g[]
+	u8 b[]
+	u8 h[]
+}
+
+struct ZetBlob: 0x3333 {
+
+	u32 actual_size {
+		# Это поле нужно, так как data будет всегда выровнено
+		# до 4-х байтов
+		description "Фактический размер, байтов"
+	}
+	u8 data[]
+}
+
+struct ZetConsoleMessage: 0x4444 {
+	char message[] {
+		control multiedit
+	}
+}
+

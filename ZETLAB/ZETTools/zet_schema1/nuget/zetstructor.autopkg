@@ -1,0 +1,57 @@
+nuget {
+	nuspec {
+		id = zetstructor;
+		version: 1.0.11-alpha;
+		title: ZetSchema parser and compiler;
+		authors:{ZETLAB};
+		owners: {ZETLAB};
+		licenseUrl:"http://www.zetlab.ru/support/links/";
+		projectUrl:"http://www.zetlab.ru/support/programming/";
+		iconUrl:"http://zetlab.ru.images.1c-bitrix-cdn.ru/bitrix/templates/zetlab/images/logo_intr.png";
+		requireLicenseAcceptance:false;
+		summary: ZetSchema parser and compiler tools for translating zet schemas to .h and .bin files.;
+		releaseNotes:"Empty structure support has been added. This version is working with .zschema1, .zbinary1 file extensions. Old file extensions are supported for compatibility reason. This is pre release version! Please don't use it in the release projects. Just for internal testing only!";
+		copyright: ZETLAB 2015;
+		tags: {ZETLAB};
+		description: ZetSchema parser and compiler;
+	};
+	
+	files {
+		include : {
+			"..\zet_struct1.h",
+			"..\zet_schema1.h"
+		};
+
+		docs: {
+			"..\zet_structor.txt",
+			"..\test_zet_schema1.cpp"
+		};
+
+		nested1Docs: {
+			#destination = ${d_docs}\html;
+			"..\html\**\*"
+		};
+
+		nested2Docs: {
+			#destination = ${d_docs}\samples;
+			"samples\*"
+		};
+
+		[x86, V120, debug]
+		{
+			bin:..\build\Debug\zet_structor.exe;
+			lib:..\build\Debug\zet_schema1.lib;
+			symbols:..\build\Debug\zet_structor.pdb;
+		}
+
+		[x86, V120, release]
+		{
+			bin:..\build\Release\zet_structor.exe;
+			lib:..\build\Release\zet_schema1.lib;
+		}
+	};
+
+	targets {
+		Defines += ZET_STRUCTOR;
+	};
+}

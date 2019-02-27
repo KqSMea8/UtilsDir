@@ -1,0 +1,10 @@
+// Общая структура для произвольных результатов измерений
+// В TimeStamp заголовка абсолютное время данных
+//
+struct CommonMeasureResult: 0x10060 {
+	
+	float result {
+              description "Result of measures from any programm"
+        }
+
+}

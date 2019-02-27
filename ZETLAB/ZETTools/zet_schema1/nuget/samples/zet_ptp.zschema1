@@ -1,0 +1,78 @@
+// ZETLAB PTP configuration structs
+
+struct ZetPtpConfig: 0x400 {
+	title "PTP"
+	description "PTP settings"
+
+	u32 transport {
+		description "Network layer"
+		default 0
+		control combobox
+		string_list
+			"UDP IPv4",
+			"IEEE 802.3 (Ethernet)"
+	}
+	/* тест */
+	u32 mechanism {
+		description "Delay mechanism"
+	# тест 2
+		default 0
+		control combobox
+		string_list
+			"E2E (End-to-end)",
+			"P2P (Peer-to-peer)"
+	}
+	u32 priority1 {
+		description "Priority 1"
+		default 128
+		maximum 255
+	}
+	u32 priority2 {
+		description "Priority 2"
+		default 128
+		maximum 255
+	}
+	u32 domain {
+		description "Domain number"
+		default 0
+		maximum 127
+	}
+}
+
+struct ZetPtpState: 0x401 {
+	title "PTP state"
+	description "Current PTP state"
+	readonly true
+
+	u32 time {
+		description "currentTime"
+		control time
+	}
+	u32 port_state {
+		description "portState"
+		control combobox
+		string_list
+			"NONE",
+			"INITIALIZING",
+			"FAULT",
+			"DISABLED",
+			"LISTENING",
+			"PRE_MASTER",
+			"MASTER",
+			"PASSIVE",
+			"UNCALIBRATED",
+			"SLAVE"
+	}
+	char port_identity[32] {
+		description "portIdentity"
+	}
+	char parent_port_identity[32] {
+		description "parentPortIdentity"
+	}
+	s64 offset_from_master {
+		description "offsetFromMaster, nsec"
+	}
+	s64 mean_path_delay {
+		description "meanPathDelay, nsec"
+	}
+}

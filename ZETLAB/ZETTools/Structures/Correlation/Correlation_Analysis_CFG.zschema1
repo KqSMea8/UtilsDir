@@ -1,0 +1,99 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Correlation_Analysis_CFG: 0x10076
+{
+	title "Configuraion of correlation analysis"
+	description "Instant correlation"
+
+	u8 channelID_0[16] {
+		description "Identifier of first channel"
+		default 0
+	}
+	
+	u8 channelID_1[16] {
+		description "Identifier of second channel"
+		default 0
+	}
+	
+	u16 indexKit {
+		description "Index of kit"
+		default 0
+	}
+	
+	u8 bCalcDistance {
+		description "Distance calculation"
+		default 0	
+	}
+	
+	u8 bInversion {
+		description "Calculated value inversion"
+		default 0	
+	}
+	
+	u8 bFiltration {
+		description "Signal filtering"
+		default 0	
+	}
+	
+	u8 bFiltrationDiscrete {
+		description "Discrete filtering"
+		default 0	
+	}
+	
+	u16 decade {
+		description "Decade of frequency range"
+		default 0
+	}
+	
+	u8 typeModeDC {
+		description "Mode of operation with DC"
+		default 0	
+	}
+	
+	u8 typeFuncView {
+		description "Type of displayed function"
+		default 0	
+	}
+	
+	u16 typeTimeDuration {
+		description "Duration type"
+		default 0	
+	}
+	
+	float fTimeAver_sec {
+		description "Averaging time of the displayed result, s"
+		default 0	
+	}
+	
+	float fFreqLowPass {
+		description "Cutoff frequency LPF, Hz"
+		default 0	
+	}
+	
+	float fFreqHighPass {
+		description "Cutoff frequency HPF, Hz"
+		default 0	
+	}
+	
+	float fInterChanDelay {
+		description "Inter-channel delay, ms"
+		default 0	
+	}
+	
+	float fDistance_0 {
+		description "Distance of the channel sensor 1, m"
+		default 0	
+	}
+	
+	float fDistance_1 {
+		description "Distance of the channel sensor 2, m"
+		default 0	
+	}
+	
+	float fShiftZero_funcA12 {
+		description "Shift of function A12, ms"
+		default 0	
+	}
+}

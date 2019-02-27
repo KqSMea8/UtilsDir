@@ -1,0 +1,25 @@
+struct Modbus_Uptime_Reset_Result: 0x10087
+{
+	title "Uptime Reset"
+	description "Uptime reset information"
+
+	u32 channelNode {
+		description "Channel node"
+	}
+
+	f32 samplingRate {
+		description "Channel sampling rate"
+	}
+
+	char channelName[32] {
+		description "Channel name"
+	}
+
+	u64 uptimeBefore {
+		description "Uptime before reset"
+	}
+
+	u64 uptimeAfter {
+		description "Uptime after reset"
+	}
+}

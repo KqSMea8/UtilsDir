@@ -1,0 +1,16 @@
+// СКСВ. Алгоритм классификации рывков
+
+struct Ssm_cfg_Algr_Spurt: 0x10026
+{
+	description "SKSV.Spurt algorithm configuration"
+	title "Spurt"
+
+	float thresholdRatio
+	{
+		description "The threshold value is exceeded the maximum value of the peak value"
+		default 100.0
+		control edit
+		minimum 10.0
+		maximum 1000.0
+	}
+}

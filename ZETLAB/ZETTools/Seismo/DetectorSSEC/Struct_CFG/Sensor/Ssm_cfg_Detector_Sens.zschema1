@@ -1,0 +1,94 @@
+// СКСВ. Конфигурационные параметры датчика компонента "Детектор"
+//
+struct Ssm_cfg_Detector_Sens: 0x1004A {
+	
+	u32 objectID {
+		description "ID sensor"
+		default 1
+		control edit
+		minimum 1
+	}
+	
+	u32 bActivate {
+		description "Work sensor (0 - off, 1 - on)"
+		default 1
+		control combobox
+		list 0, 1	
+	}	
+	
+	u32 sensorType {
+		description "Type sensor"
+		default 0
+		control combobox
+		string_list "accsel", "velosity", "geofon"
+	}
+	
+	float bandFreq_F1 {
+		description "Frequency band, low value, Hz"
+		default 1
+		minimum 0.1
+		maximum 2.0
+		control edit
+	}
+	
+	float bandFreq_F2 {
+		description "Frequency band, high value, Hz"
+		default 10
+		minimum 1.0
+		maximum 30.0
+		control edit
+	}
+	
+	float minValueP {
+		description "The minimum value of channel power, mV"
+		default 2000
+		minimum 1000
+		maximum 4000
+		control edit
+	}
+	
+	float maxValueP {
+		description "The maximum value of channel power, mV"
+		default 4000
+		minimum 3000
+		maximum 5000
+		control edit
+	}
+	
+	float maxValueXYZ {
+		description "The maximum value of channels X, Y, Z, m/c2"
+		default 20
+		minimum 10
+		maximum 30
+		control edit
+	}
+		
+	u32 bNeedDiagn {
+		description "Need diagnostic data"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedOutputDebug {
+		description "Need OutputDebug data"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedDTU {
+		description "Need DTU-files"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedCopySecStrToLogger {
+		description "Need copy second struct to logger"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+}

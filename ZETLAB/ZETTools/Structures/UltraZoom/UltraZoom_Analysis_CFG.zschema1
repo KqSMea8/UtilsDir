@@ -1,0 +1,41 @@
+// Структура конфигурационных параметров программы UltraZoom.exe
+
+struct UltraZoom_Analysis_CFG: 0x10072
+{
+	title "CFG of UltraZoom analysis"
+	description "Instant UltraZoom"
+
+    u32 numberOfChannels {
+		description "Number of channels used in program"
+		default 1
+    }
+	
+	u8 channelID[16] {
+		description "Channel identifier"
+		default 0
+	}
+	u8 typeResolution {
+		description "Type of frequency resolution"
+		default 0
+    }
+		
+ 	u32 code_updata {
+		description "Code time data updates"
+		default 1
+    }
+
+	float time_grammaY {
+		description "Time display data, sec"
+		default 10
+    }
+	
+	float freq_F0 {
+		description "Center frequency, Hz"
+		default 1
+    }
+
+	float freq_band {
+		description "Displayed band analysis, Hz"
+		default 1
+    }
+}

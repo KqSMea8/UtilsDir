@@ -1,0 +1,16 @@
+// СКСВ. Алгоритм классификации однополярных сигналов
+
+struct Ssm_cfg_Algr_UnipolarSignal: 0x10051
+{
+	description "SKSV.UnipolarSignal algorithm configuration."
+	title "UnipolarSignal"
+
+	float thresholdRatio
+	{
+		description "The threshold value of the ratio"
+		default 2.0
+		control edit
+		minimum 1.5
+		maximum 10.0
+	}
+}

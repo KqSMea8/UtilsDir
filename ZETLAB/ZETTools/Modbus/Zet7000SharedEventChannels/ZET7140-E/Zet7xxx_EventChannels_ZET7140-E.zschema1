@@ -1,0 +1,52 @@
+// Zet7xxx. Событийные каналы. ZET7140-E
+
+struct Zet7xxx_EventChannels_ZET7140_E: 0x10058
+{
+	description "Zet7xxx. Событийные каналы. ZET7140-E"
+	title "Событийные каналы ZET7140-E"
+	
+	float amplitude
+	{
+		description "Амплитуда, дБ"
+		control edit
+		default 0.0
+		minimum 0.0
+		maximum 1000.0
+	}
+	
+	float frontDuration
+	{
+		description "Длительность фронта, мкс"
+		control edit
+		default 0.0
+		minimum 0.0
+		maximum 1000.0
+	}
+		
+	float signalDuration
+	{
+		description "Длительность спада, мкс"
+		control edit
+		default 0.0
+		minimum 0.0
+		maximum 1000.0
+	}
+	
+	float numberThresholdUp
+	{
+		description "Число превышений порога, шт"
+		control edit
+		default 0.0
+		minimum 0.0
+		maximum 1000.0
+	}
+	
+	float signalEnergy
+	{
+		description "Энергия сигнала, мВ*с"
+		control edit
+		default 0.0
+		minimum 0.0
+		maximum 1000.0
+	}
+}

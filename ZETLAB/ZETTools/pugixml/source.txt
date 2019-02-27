@@ -1,0 +1,11 @@
+Здесь лежит релизная версия pugixml, которая будет периодически обновляться
+
+Текущую версию можно узнать в readme.txt
+
+https://github.com/zeux/pugixml
+
+
+ВНИМАНИЕ!
+При обновлении в файле src/pugiconfig.hpp следует раскомментировать строку:
+
+#define PUGIXML_WCHAR_MODE

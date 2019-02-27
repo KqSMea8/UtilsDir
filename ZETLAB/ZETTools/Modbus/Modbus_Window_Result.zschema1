@@ -1,0 +1,29 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Modbus_Window_Result: 0x10084
+{
+	title "Window data result"
+	description "Data"
+
+   	u32 channelNode {
+		description "Channel node"
+		default 0
+	}
+	
+	f32 freq {
+		description "Freq"
+		default 0
+	}
+
+	char channelName[32] {
+		description "Channel name"
+		default ""
+	}
+		
+	float data[] {
+		description "Window data"
+		default 0
+	}
+}

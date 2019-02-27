@@ -1,0 +1,31 @@
+/* C style comment */
+# bash style comment
+// C++ style comment
+
+struct ZetAmplifier: 0x105 {
+
+	title "Amplifier"
+	description "Amplifier settings"
+
+	char name[128] {
+		description "Output channel name"
+		control edit
+		default "Channel"
+	}
+	u64 source_channel {
+		description "Input channel"
+		control device_channel
+	}
+	float frequency {
+		description "Frequency"
+		default 1
+		control edit
+		readonly true
+	}
+	float gain {
+		description "Gain"
+		default 1.0
+		control edit
+	}
+}
+

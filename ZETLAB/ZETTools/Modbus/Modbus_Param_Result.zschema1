@@ -1,0 +1,55 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Modbus_Param_Result: 0x10085
+{
+	title "Param data result"
+	description "Data"
+
+   	u32 channelNode {
+		description "Channel node"
+		default 0
+	}
+	
+	float parameter1 {
+		description "Parameter1"
+		default 0.
+	}
+	float parameter2 {
+		description "Parameter2"
+		default 0.
+	}
+	float parameter3 {
+		description "Parameter3"
+		default 0.
+	}
+	float parameter4 {
+		description "Parameter4"
+		default 0.
+	}
+	float parameter5 {
+		description "Parameter5"
+		default 0.
+	}
+	float parameter6 {
+		description "Parameter6"
+		default 0.
+	}
+	float parameter7 {
+		description "Parameter7"
+		default 0.
+	}
+	float parameter8 {
+		description "Parameter8"
+		default 0.
+	}
+	float parameter9 {
+		description "Parameter9"
+		default 0.
+	}
+	float parameter10 {
+		description "Parameter10"
+		default 0.
+	}
+}

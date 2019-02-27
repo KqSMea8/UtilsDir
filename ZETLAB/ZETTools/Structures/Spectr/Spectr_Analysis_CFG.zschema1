@@ -1,0 +1,59 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Spectr_Analysis_CFG: 0x10077
+{
+	title "Configuration of specral analysis"
+	description "Instant spectr"
+
+	u8 channelID[16] {
+		description "Full channel identificator"
+		default 0
+	}
+	
+	double resolution {
+		description "Frequency resolution"
+		default 0
+	}
+
+	double averaging {
+		description "Averaging time of one measure"
+		default 0
+	}
+	
+	u32 decade {
+		description "Decade of frequency resolution"
+		default 0
+	}
+
+	u32 averagingType {
+		description "Type of average: linear or exponential"
+		default 0
+	}
+	
+	u32 calculationType {
+		description "Type of calculated value: 0 - RMS, 1 - PEAK, 2 - SD, 3 - SPD"
+		default 0
+	}
+	
+	u32 logarithm {
+		description "Calculate result spectr in decibell"
+		default 0
+	}
+	
+	u32 integration {
+		description "Differenciation or intergration"
+		default 2
+	}
+	
+	u32 spectrType {
+		description "Fast Fourier Transform or Discrete Furier Transform"
+		default 1
+	}
+
+        u32 windowType {
+		description "Type of weight window"
+		default 0
+	}
+}

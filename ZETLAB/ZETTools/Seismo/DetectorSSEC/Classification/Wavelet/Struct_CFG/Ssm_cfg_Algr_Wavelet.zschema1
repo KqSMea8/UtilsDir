@@ -1,0 +1,32 @@
+//-----------------------------------------------------------------------------
+// СКСВ. Алгоритм определения ложных событий с помощью вейвлет-анализа
+//-----------------------------------------------------------------------------
+// Конфигурационные параметры
+
+struct Ssm_cfg_Algr_Wavelet: 0x10053 {
+	title "Configuration"
+	description "SKSV. Configuration algorithm Wavelet"
+
+	u32 typeFDWT {
+		description "Type FDWT for wavelet-filtration"
+		default 2
+		control combobox
+		string_list "Haar", "db1", "db2", "db3", "db4", "db5", "db6", "db7", "db8", "db9", "db10", "sym1", "sym2", "sym3", "sym4", "sym5", "sym6", "sym7", "coif1", "coif2", "coif3", "coif4", "coif5"
+	}	
+	
+	u32 levelFDWT {
+		description "Level FDWT for wavelet-filtration"
+		default 4
+		control combobox
+		list 4, 5, 6, 7, 8, 9, 10
+	}
+	
+	f32 thresholdPercent {
+		description "Threshold of number not zero value in percent"
+		default 17
+		control edit
+		minimum 10
+		maximum 90
+	}
+}
+//-----------------------------------------------------------------------------

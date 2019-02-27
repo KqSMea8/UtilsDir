@@ -1,0 +1,68 @@
+#pragma once
+
+typedef unsigned char	u8;
+typedef unsigned short	u16;
+
+#define MODBUS_ADU_MAX_LEN		(260)
+#define MODBUS_PDU_MAX_LEN		(253)
+#define MODBUS_DA_MAX_LEN		(248)
+
+
+enum ModbusProtocol
+{
+	MODBUS_PROTOCOL	= 0,
+	MODBUS_RTU		= 1,
+	MODBUS_TCP		= 2
+};
+
+enum ModbusType
+{
+	MODBUS_TYPE		= 0,
+	MODBUS_MASTER	= 1,
+	MODBUS_SLAVE	= 2
+};
+
+enum ModbusRegisters
+{
+	MODBUS_REGISTER_NONE		= 0,
+	MODBUS_REGISTER_COIL		= 1,
+	MODBUS_REGISTER_DISCRETE	= 2,
+	MODBUS_HOLDING_REGISTER		= 3,
+	MODBUS_INPUT_REGISTER		= 4
+};
+
+enum ModbusFunction
+{
+	MODBUS_READ_COILS				= 0x01,	// Read Coils
+	MODBUS_READ_DISCRETE_INPUTS		= 0x02,	// Read Discrete Inputs
+	MODBUS_READ_HOLDING_REGISTERS	= 0x03,	// Read Holding Registers
+	MODBUS_READ_INPUT_REGISTERS		= 0x04,	// Read Input Registers
+	MODBUS_WRITE_SINGLE_COIL		= 0x05,	// Write Single Coil
+	MODBUS_WRITE_SINGLE_REGISTER	= 0x06,	// Write Single Register
+	MODBUS_READ_EXCEPTION_STATUS	= 0x07,	// Read Exception Status
+	MODBUS_DIAGNOSTICS				= 0x08,	// Diagnostics
+	MODBUS_GET_COMM_EVENT_COUNTER	= 0x0B,	// Get Comm Event Counter
+	MODBUS_GET_COMM_EVENT_LOG		= 0x0C,	// Get Comm Event Log
+	MODBUS_WRITE_MULTIPLE_COILS		= 0x0F,	// Write Multiple Coils
+	MODBUS_WRITE_MULTIPLE_REGISTERS	= 0x10,	// Write Multiple registers
+	MODBUS_REPORT_SLAVE_ID			= 0x11,	// Report Slave ID
+	MODBUS_READ_FILE_RECORD			= 0x14,	// Read File Record
+	MODBUS_WRITE_FILE_RECORD		= 0x15,	// Write File Record
+	MODBUS_MASK_WRITE_REGISTER		= 0x16,	// Mask Write Register
+	MODBUS_RW_MULTIPLE_REGISTERS	= 0x17,	// Read/Write Multiple registers
+	MODBUS_READ_FIFO_QUEUE			= 0x18,	// Read FIFO Queue
+	MODBUS_READ_DEVICE_IDENTIFICATION= 0x2B	// Read Device Identification
+};
+
+enum ModbusException
+{
+	MODBUS_ILLEGAL_FUNCTION			= 0x1,
+	MODBUS_ILLEGAL_DATA_ADDRESS		= 0x2,
+	MODBUS_ILLEGAL_DATA_VALUE		= 0x3,
+	MODBUS_SLAVE_DEVICE_FAILURE		= 0x4,
+	MODBUS_ACKNOWLEDGE				= 0x5,
+	MODBUS_SLAVE_DEVICE_BUSY		= 0x6,
+	MODBUS_MEMORY_PARITY_ERROR		= 0x8,
+	MODBUS_GATEWAY_PATH_UNAVAILABLE	= 0xA,
+	MODBUS_FAILED_TO_RESPOND		= 0xB
+};

@@ -1,0 +1,58 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Cross_Spectrum_Analysis_Config: 0x1007A
+{
+	title "Configuraion of cross spectrum analysis"
+	description "Configuration"
+
+	u8 channelID_1[16] {
+		description "Identificator of first channel"
+		default 0
+	}
+	
+	u8 channelID_2[16] {
+		description "Identificator of second channel"
+		default 0
+	}
+	
+	double resolution {
+		description "Frequency resolution"
+		default 0
+	}
+
+	double averaging {
+		description "Averaging time of one measure"
+		default 0
+	}
+	
+	u32 decade {
+		description "Decade of frequency resolution"
+		default 0
+	}
+
+	u32 averagingType {
+		description "Type of average"
+		string_list "Linear", "Exponential"
+		default 0
+	}
+	
+	u32 integration {
+		description "Differenciation or intergration"
+		string_list "Differenciation2", "Differenciation", "No", "Intergration", "Intergration2"
+		default 2
+	}
+	
+	u32 spectrType {
+		description "Fast Fourier Transform or Discrete Furier Transform"
+		string_list "FFT", "DFT"
+		default 1
+	}
+
+    u32 windowType {
+	description "Type of weight window"
+	string_list "Rectangular", "Hann", "Hanning", "Hamming", "Blackman", "Bartlett", "Kaiser", "Reef-Vincent (4)", "Blackman-Harris (3)", "Blackman-Harris (4)", "Nuttall", "Blackman–Nuttall", "Flat top window"
+	default 3
+	}
+}

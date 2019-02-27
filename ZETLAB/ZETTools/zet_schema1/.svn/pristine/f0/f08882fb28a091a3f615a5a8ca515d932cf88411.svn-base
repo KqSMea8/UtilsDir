@@ -1,0 +1,11 @@
+// ZETLAB console emulation
+
+struct ZetConsoleMessage: 0x20 {
+	title "~"
+	description "Console"
+	readonly true
+
+	char text[] {
+		description "Message"
+	}
+}

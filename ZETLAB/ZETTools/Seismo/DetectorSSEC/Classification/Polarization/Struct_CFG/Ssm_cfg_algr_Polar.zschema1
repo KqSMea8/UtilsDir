@@ -1,0 +1,22 @@
+// СКСВ. Конфигурационные параметры алгоритма ложности событий "Поляризация"
+//
+struct Ssm_cfg_Algr_Polar: 0x1001C {
+	description "SKSV. The structure of the algorithm configuration"
+	title "Polarization"
+	
+	float TimeAverArray {
+		description "Time averaging for matrix elements, sec"
+		default 0.2
+		control edit
+		minimum 0.1
+		maximum 1.0
+	}
+ 
+	float TimeAverSignal {
+		description "Time averaging for signal, sec"
+		default 10.0
+		control edit
+		minimum 1.0
+		maximum 60.0
+	}	
+}

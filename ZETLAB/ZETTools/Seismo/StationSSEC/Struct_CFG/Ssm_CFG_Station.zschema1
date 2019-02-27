@@ -1,0 +1,133 @@
+// Конфигурационные параметры сейсмостанции
+
+struct Ssm_cfg_Station: 0x10024 {
+
+	title "Station configuration"
+	description "Station configuration"
+
+	u32 objectID {
+		description "Station ID"
+		minimum 0
+		default 1
+		control edit
+	}	
+	
+	char shortName[32] {
+		description "Station Short Name"
+		control edit
+		default "Station 1"
+	}
+
+	group "Station coordinates"
+	double latitude {
+		description "Station Latitude, degrees"
+		control edit
+		minimum -90.0
+		maximum 90.0
+		default 55.59
+	}
+	double longitude {
+		description "Station Longitude, degrees"
+		control edit
+		minimum -180.0
+		maximum 180.0
+		default 37.13
+	}
+	double altitude {
+		description "Station Altitude, meters above sea level"
+		control edit
+		minimum -417.5
+		maximum 8848.0
+		default 150.0
+	}
+	end_group
+
+    double mileage {
+		description "Station pipe mileage, kilometers  "
+		control edit
+		minimum 0.0
+		maximum 10000.0
+		default 0.0
+	}
+	
+	u32 work_mode {
+		description "Code of sesmostation operation mode: 0-обнаружение, 1-моделированиеб 2-проверка датчиков, 3-отключена"
+		minimum 0
+		maximum 3 
+		default 0
+		control combobox
+	}
+	
+	group "The coefficients for calculating the magnitude"
+	float magn_A {
+		description "multiplikatiynfy factor for calculating the magnitude"
+		minimum 2.0
+		maximum 2.0
+		default 2.0
+		control edit
+	}
+	
+	float magn_B {
+		description "additive factor for calculating the magnitude"
+		minimum 2.1
+		maximum 2.5
+		default 2.3
+		control edit
+	}
+	
+	float magn_C {
+		description "correction factor for calculating the magnitude"
+		minimum -2.0
+		maximum 2.0
+		default 0.0
+		control edit
+	}
+	
+	group "The coefficients for calculating distance"
+	float velocity_P {
+		description "velocity of P-phase of seismic wave"
+		minimum 5.5
+		maximum 7.5
+		default 6.8
+		control edit
+	}
+	
+	float ratio_PS {
+		description "ratio of velocity of P and S phases of sesmic wave"
+		minimum 1.65
+		maximum 1.85
+		default 1.74
+		control edit
+	}
+	end_group
+	
+	float threshold {
+		description "threshold of seismic type: strog or weak"
+		minimum 0.001
+		maximum 8.000
+		default 0.03
+		control edit
+	}
+
+	u32 bNeedOutputDebug {
+		description "Need OutputDebug data"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	u32 bNeedCopySecStrToLogger {
+		description "Need copy second struct to logger"
+		default 0
+		control combobox
+		list 0, 1	
+	}
+	
+	float timeLiveSecStructure {
+		description "Lifetime every second structures"
+		minimum 5.0
+		maximum 100.0
+		default 10.0
+		control edit
+	}
+}

@@ -1,0 +1,142 @@
+// Modbus. External device
+//
+struct Modbus_External_Device: 0x1004f {
+	description "Modbus. The structure of the external device"
+	title "External device"
+
+	u32 masterType
+	{
+		description "Master type"
+		string_list "ZET7070", "ZET7076"
+		default 0
+		control combobox
+	}
+	u64 masterSerial
+	{
+		description "Master serial"
+		default 0
+		control edit
+	}
+	u32 deviceType
+	{
+		description "External device type"
+		string_list "DMP-331", "TTM-2-04", "ИН-Д3ц"
+		default 0
+		control combobox
+	}
+	u64 deviceSerial
+	{
+		description "External device serial"
+		default 0
+		control edit
+	}
+	char deviceName[64]
+	{
+		description "External device name"
+		default "External"
+		control edit
+	}
+	u8 deviceNode
+	{
+		description "External device node"
+		default 1
+		control edit
+		minimum 1
+		maximum 63
+	}
+}
+
+struct Modbus_External_Channel: 0x10050 {
+	description "Modbus. The structure of the external device channel"
+	title "External device channel"
+
+	f32 frequency
+	{
+		description "Frequency"
+		default 1.
+		control edit
+		readonly true
+	}
+	char measure[64]
+	{
+		description "Measure"
+		default "мВ"
+		control edit
+	}
+	char channelName[64]
+	{
+		description "Channel name"
+		default "Канал"
+		control edit
+	}
+	f32 minLevel
+	{
+		description "Min level"
+		default -1000.
+		control edit
+	}
+	f32 maxLevel
+	{
+		description "Max level"
+		default 1000.
+		control edit
+	}
+	f32 reference
+	{
+		description "Reference"
+		default 0.001
+		control edit
+	}
+	f32 sense
+	{
+		description "Sense"
+		default 0.001
+		control edit
+	}
+	f32 resolution
+	{
+		description "Resolution"
+		default 0.001
+		control edit
+	}
+	u32 dataAddress
+	{
+		description "Data address"
+		default 0.
+		control edit
+	}
+	u32 dataCommand
+	{
+		description "Data command"
+		string_list "ReadHoldingRegisters(0x3)", "ReadInputRegisters(0x4)"
+		default 1
+		control combobox
+	}
+	u32 dataType
+	{
+		description "Data type"
+		string_list "float (AB CD)", "float(CD AB)", "int32 (AB CD)"
+		default 0
+		control combobox
+	}
+	f32 multiplicator
+	{
+		description "The multiplicative component"
+		default 1.0
+		control edit
+	}
+	f32 addicator
+	{
+		description "The additive component"
+		default 0.0
+		control edit
+	}
+	u32 liveTicks
+	{
+		description "Sensor live time out (in counts)"
+		default 1
+		control edit
+		minimum 1
+		maximum 10
+	}
+}

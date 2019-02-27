@@ -1,0 +1,66 @@
+struct Channel_Par: 0x10080 {
+	description "The structure of the channel"
+	title "Channel"
+
+	u32 status
+	{
+		description "status"
+		string_list "ADC", "DAC", "Virtual", "Digital", "Disconnected ADC", "ADC disconnected", "Smart sensor", "Disconnected smart sensor", "Fast smart sensor"
+		default 0
+		control combobox
+	}
+	char name[64]
+	{
+		description "name"
+		default "Channel"
+		control edit
+	}
+	char measure[32]
+	{
+		description "measure"
+		default "mV"
+		control edit
+	}
+	f64 frequency
+	{
+		description "frequency"
+		default 25000
+		control edit
+	}
+	f64 sense
+	{
+		description "sense"
+		default 0.001
+		control edit
+	}
+	f64 reference
+	{
+		description "reference"
+		default 0.001
+		control edit
+	}
+	f64 dc
+	{
+		description "dc"
+		default 0
+		control edit
+	}
+	f64 maxLevel
+	{
+		description "maxLevel"
+		default 10000
+		control edit
+	}
+	f64 minLevel
+	{
+		description "minLevel"
+		default 0.001
+		control edit
+	}
+	f64 subLevel
+	{
+		description "subLevel"
+		default 0.001
+		control edit
+	}
+}

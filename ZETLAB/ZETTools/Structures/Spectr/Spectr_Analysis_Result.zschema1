@@ -1,0 +1,54 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Spectr_Analysis_Result: 0x10070
+{
+	title "Result of specral analysis"
+	description "Instant spectr"
+
+    u32 numberOfChannels {
+		description "Number of channels used in programm"
+		default 1
+    }
+
+	u8 channelIdentificator[16] {
+		description "Full channel identificator"
+		default 0
+	}
+	
+	char spectrUnits[8] {
+		description "Unit of result values"
+		default ""
+	}
+	
+	double resolution {
+		description "Frequency resolution"
+		default 0
+	}
+	
+	float minFrequncy {
+		description "Minimum frequency value in range"
+		default 0
+	}
+	
+	float maxFrequncy {
+		description "Maximum frequency value in range"
+		default 0
+	}
+	
+	float peakValue {
+		description "Maximum value of spectr"
+		default 0
+	}
+	
+	float peakFrequency {
+		description "Frequency of maximum value"
+		default 0
+	}
+	
+	float spectr[] {
+		description "Result"
+		default 0
+	}
+}

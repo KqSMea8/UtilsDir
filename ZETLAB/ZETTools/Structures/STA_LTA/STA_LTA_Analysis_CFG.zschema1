@@ -1,0 +1,59 @@
+// Структура конфигурационных параметров программы STA_LTA.exe
+// В TimeStamp заголовка абсолютное время сервера в UTC
+//
+struct STA_LTA_Analysis_CFG: 0x10074 {
+	
+	title "CFG of STA_LTA analysis"
+	description "Instant STA_LTA"
+
+    u32 numberOfChannels {
+		description "Number of channels used in program"
+		default 1
+    }
+	
+	u8 channelID_1[16] {
+		description "Channel 1 identifier"
+		default 0
+	}
+	
+	u8 channelID_2[16] {
+		description "Channel 2 identifier"
+		default 0
+	}
+	
+	u8 channelID_3[16] {
+		description "Channel 3 identifier"
+		default 0
+	}	
+	
+	float Fmin {
+		description "The minimum frequency, Hz"
+		default 0
+	}
+	
+	float Fmax {
+		description "The maximum frequency, Hz"
+		default 0
+	}
+	
+	float timeSTA {
+		description "The duration of the STA, s"
+		default 0
+	}
+	
+	float timeLTA {
+		description "The duration of the LTA, s"
+		default 0
+	}
+	
+	float threshold {
+		description "The threshold value of STA_LTA"
+		default 0
+	}
+	
+	float factor {
+		description "The factor value of STA_LTA"
+		default 0
+	}
+	
+}

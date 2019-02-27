@@ -1,0 +1,47 @@
+// СКСВ. Конфигурационная структура детектора событий
+
+struct Ssm_cfg_EventDetector_Station: 0x10032
+{
+	description "SKSV. Event detector configuration"
+	title "Event detector CFG"
+
+	u32 typeDetector
+	{
+		description "Type detector: 0 - by event, 1 - external trigger"
+		control edit
+		default 0
+		minimum 0
+		maximum 1	
+	}
+	
+	float thresholdPercent
+	{
+		description "The value of threshold, percent"
+		control edit
+		default 49.0
+		minimum 0.0
+		maximum 100.0
+	}
+		
+	double timeLiveEvent
+	{
+		description "The time live of event, sec"
+		control edit
+		default 600
+		minimum 10
+		maximum 3600
+	}
+	
+	double durationTimeWindow
+	{
+		description "The duration time window, sec"
+		control edit
+		default 10
+		minimum 1
+		maximum 60
+	}
+	
+	char nameTopObject[64] {
+		description "The mame of top object"
+	}	
+}

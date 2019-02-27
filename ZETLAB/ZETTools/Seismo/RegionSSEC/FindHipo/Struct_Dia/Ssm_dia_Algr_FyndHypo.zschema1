@@ -1,0 +1,15 @@
+# bash style comment
+/* C style comment */
+// C++ style comment
+//-----------------------------------------------------------------------------
+struct Ssm_dia_Algr_FindHypo: 0x10042
+{
+	description "SKSV. The data on which the results algorithm FindHypo"
+	title "Diagnostic"
+
+	float residual {
+		description "Residual, km"
+		control edit
+	}
+}
+//-----------------------------------------------------------------------------

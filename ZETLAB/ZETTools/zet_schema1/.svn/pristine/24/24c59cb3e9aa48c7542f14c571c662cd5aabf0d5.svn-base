@@ -1,0 +1,136 @@
+// ZETLAB Protocol service structs
+
+///////////////////////////////////////////////////////////////////////////////
+// Objects info
+
+struct ZetVoid: 0x1 {
+	// Empty structure for client requests
+}
+
+struct ZetDevice: 0x10 {
+	title "Device"
+	description "Device info"
+	hidden true
+	readonly true
+
+	u32 device_status {
+		string_list "Removed", "Added"
+	}
+	char name[64]
+}
+
+struct ZetModule: 0x11 {
+	title "Module"
+	description "Module info"
+	hidden true
+	readonly true
+
+	u32 module_status {
+		string_list "None", "Paused", "Active"
+	}
+	char name[64]
+	u32 process_count { minimum 1 maximum 0x10000 }
+	u32 setting_count { minimum 1 maximum 0x10000 }
+	u32 channel_count { minimum 1 maximum 0x10000 }
+}
+
+struct ZetProcess: 0x12 {
+	title "Process"
+	description "Process info and control"
+	hidden true
+	readonly true
+
+	u32 process_status {
+		string_list "None", "Disabled", "Enabled"
+		readonly false
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Save state command
+
+struct ZetSaveCommand: 0x13 {
+	hidden true
+
+	u32 _unused
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// List commands
+
+struct ZetDeviceList: 0x80 {
+	title "Device List"
+	description "List of available devices"
+	hidden true
+	readonly true
+
+	u64 device_id[]
+}
+
+struct ZetModuleList: 0x81 {
+	title "Module List"
+	description "List of device modules"
+	hidden true
+	readonly true
+
+	u32 module_id[]
+}
+
+struct ZetProcessList: 0x82 {
+	title "Process List"
+	description "List of module processes"
+	hidden true
+	readonly true
+
+	u16 process_id[]
+}
+
+struct ZetChannelList: 0x83 {
+	title "Channel List"
+	description "List of process channels"
+	hidden true
+	readonly true
+
+	u16 channel_id[]
+}
+
+struct ZetSchemaList: 0x88 {
+	title "Schema List"
+	description "List of module schemas"
+	hidden true
+	readonly true
+
+	u32 schema_type[]
+}
+
+///////////////////////////////////////////////////////////////////////////////
+// Channel control
+
+struct ZetChannel: 0xff {
+	title "Channel"
+	description "Channel control"
+	hidden true
+	readonly true
+
+	u32 channel_status {
+		string_list "None", "Disabled", "Enabled"
+		readonly false
+	}
+	u32 channel_type {
+		description "Channel type"
+	}
+}
+
+struct ZetFloatStream: 0x1000 {
+	title "Stream"
+	description "Floating-point stream"
+	hidden true
+	readonly true
+
+	u32 session {
+		description "Stream session"
+	}
+	float data[] {
+		description "Samples"
+	}
+}

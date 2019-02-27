@@ -1,0 +1,23 @@
+// СКСВ. Структура данных результата алгоритмов классификации событий.
+// Используется программой подбора параметров.
+//
+struct Ssm_res_Algr_Custom: 0x10045 {
+	description "SKSV. The structure of the result algorithm"
+	title "Result"
+	
+	u32 result {
+		description "Code: 0 - no event, else - an event"
+	}	
+	float value {
+		description "The current value of the algorithm"
+	}
+	float valueSNR {
+		description "The ratio signal to noise of the algorithm"
+	} 
+	float valueThreshold {
+		description "The threshold value of the algorithm"
+	}	
+	char name[64] {
+		description "The mame of algorithm"
+	}	
+}

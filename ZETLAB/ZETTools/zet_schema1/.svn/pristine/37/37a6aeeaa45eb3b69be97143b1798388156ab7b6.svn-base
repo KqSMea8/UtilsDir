@@ -1,0 +1,43 @@
+// ZETLAB Ethernet configuration structs
+
+struct ZetEthernet: 0x300 {
+	title "Ethernet"
+	description "Ethernet settings"
+
+	u8 mac[8] {
+		description "MAC address"
+		control mac
+		readonly true
+	}
+
+	u32 method {
+		description "IP address obtaining method"
+		control combobox
+		string_list "static", "DHCP"
+	}
+
+	u32 address {
+		description "IP address"
+		control ip4
+#		exclude 0, 0xFFFFffff
+#		editable "method == 0"
+	}
+
+	u32 netmask {
+		description "Subnet mask"
+		control ip4
+#		editable "method == 0"
+	}
+
+	u32 gateway {
+		description "Gateway address"
+		control ip4
+#		editable "method == 0"
+	}
+
+	u32 port {
+		description "TCP port"
+		minimum 1001
+		maximum 64000
+	}
+}

@@ -1,0 +1,29 @@
+// СКСВ. Алгоритм определения ложных событий, по анализу широкополосного шума
+struct Ssm_cfg_Algr_BroadBandNoise: 0x10020 {
+	description "SKSV. BroadBandNoise algorithm configuration"
+	title "BroadBandNoise configuration"
+
+	float threshold {
+		description "The threshold value of ratio HighPart/LowPart energy"
+		default 2.0
+		control edit
+		minimum 0.1
+		maximum 10.0
+	}
+	
+	float freqStart {
+		description "The start frequency value, Hz"
+		default 1.0
+		control edit
+		minimum 0.1
+		maximum 10.0
+	}
+	
+	float freqBoundary {
+		description "The frequency value at the boundary between the signal and noise, Hz"
+		default 10.0
+		control edit
+		minimum 5.0
+		maximum 30.0
+	}
+}

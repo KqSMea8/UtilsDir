@@ -1,0 +1,26 @@
+//		СКСВ. Структура результатов детектора STA/LTA компонента "Детектор".
+//		Структура содержит три пиковые ежесекундные значения детектора:
+//	- сигнал;
+//	- оценка СКО;
+//	- огибающая (отлична от 0 только при наличии события).
+//		Все значения безразмерные и положительные. Последнее значение
+// peakEnvelope может быть отрицательным.
+
+struct Ssm_res_Detector_STA: 0x1002A {
+
+	u32 objectID {
+		description "ID sensor"
+	}
+	
+	float peakSignal {
+		description "The peak value of signal"
+	}
+	
+	float peakStDev {
+		description "The peak value of standard deviation"
+	}
+	
+	float peakEnvelope {
+		description "The peak value of envelope"
+	}
+}

@@ -1,0 +1,86 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Cross_Spectrum_Analysis_Result: 0x1007B
+{
+	title "Result of cross spectrum analysis"
+	description "Cross spectrum"
+
+	u8 channelID_1[16] {
+		description "Identificator of first channel"
+		default 0
+	}
+	
+	u8 channelID_2[16] {
+		description "Identificator of second channel"
+		default 0
+	}
+	
+	double kp {
+		description "Kp"
+		default 0
+	}
+
+	float dataX[] {
+		description "Array of frequency values"
+		default 0
+	}
+	
+	float dataY[] {
+		description "Array of result values"
+		default 0
+	}
+}
+
+struct Cross_Spectrum_Analysis_Result_Phase: 0x1007C
+{
+	title "Result of cross spectrum analysis (phase)"
+	description "Phase"
+
+	u8 channelID_1[16] {
+		description "Identificator of first channel"
+		default 0
+	}
+	
+	u8 channelID_2[16] {
+		description "Identificator of second channel"
+		default 0
+	}
+	
+	float dataX[] {
+		description "Array of frequency values"
+		default 0
+	}
+	
+	float dataY[] {
+		description "Array of result values"
+		default 0
+	}
+}
+
+struct Cross_Spectrum_Analysis_Result_H12: 0x1007D
+{
+	title "Result of cross spectrum analysis (H12)"
+	description "H12"
+
+	u8 channelID_1[16] {
+		description "Identificator of first channel"
+		default 0
+	}
+	
+	u8 channelID_2[16] {
+		description "Identificator of second channel"
+		default 0
+	}
+	
+	float dataX[] {
+		description "Array of frequency values"
+		default 0
+	}
+	
+	float dataY[] {
+		description "Array of result values"
+		default 0
+	}
+}

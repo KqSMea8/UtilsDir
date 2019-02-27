@@ -1,0 +1,49 @@
+# bash style comment
+/* C style comment */
+// C++ style comment   
+
+struct Octave_Analysis_Config: 0x10079
+{
+	title "Configuration of octave specral analysis"
+	description "Instant spectr"
+
+	u8 channelID[16] {
+		description "Full channel identificator"
+		default 0
+	}
+	
+	u32 octaveType {
+		description "Number of bands in one octave"
+		default 1
+	}
+
+	float averaging {
+		description "Averaging time of one measure"
+		default 0
+	}
+	
+	u32 averagingType {
+		description "Type of average: linear or exponential"
+		default 0
+	}
+	
+	u32 calculationType {
+		description "Type of calculated value: 0 - RMS, 1 - PEAK"
+		default 0
+	}
+	
+	u32 logarithm {
+		description "Calculate result spectr in decibell"
+		default 0
+	}
+	
+	u32 integration {
+		description "Differenciation or intergration"
+		default 2
+	}
+	
+	u32 correctionType {
+		description "AFC correction type: 0 - no correction; 1 - A; 2 - B; 3 - C; 4 - D"
+		default 1
+	}
+}
